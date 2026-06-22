@@ -4,7 +4,7 @@
 [![Awesome](./logo.png)]() 
 [![Code License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/yzfly/awesome-chatgpt-zh/blob/main/LICENSE)
 
-> 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、Prompt 工程、推理优化、安全对齐等内容。
+> 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
 > 最近更新：2026 年 6 月
 
@@ -17,11 +17,14 @@
 - [论文精读](#论文精读)
 - [微调与训练](#微调与训练)
 - [强化学习训练（RL for LLM）](#强化学习训练rl-for-llm)
+- [自进化与自我改进](#自进化与自我改进)
 - [本地部署与推理优化](#本地部署与推理优化)
 - [AI 应用开发平台](#ai-应用开发平台)
 - [RAG 资源](#rag-资源)
 - [AI Agent 资源](#ai-agent-资源)
 - [MCP 资源](#mcp-资源)
+- [A2A 协议资源](#a2a-协议资源)
+- [上下文工程（Context Engineering）](#上下文工程context-engineering)
 - [AI 编程工具](#ai-编程工具)
 - [Prompt 工程](#prompt-工程)
 - [学习课程与视频](#学习课程与视频)
@@ -36,10 +39,10 @@
 
 | 名称 | 开发者 | 链接 | 说明 |
 | ---- | ---- | ---- | ---- |
-| ChatGPT | OpenAI | [chat.openai.com](https://chat.openai.com/) | GPT-4o / GPT-5 系列，全球用户量最大的 AI 助手 |
-| Claude | Anthropic | [claude.ai](https://claude.ai/) | Claude 4 系列（Opus/Sonnet/Haiku），长上下文与编程能力突出 |
+| ChatGPT | OpenAI | [chat.openai.com](https://chat.openai.com/) | GPT-4o / GPT-5.5 系列，全球用户量最大的 AI 助手，400K 上下文 |
+| Claude | Anthropic | [claude.ai](https://claude.ai/) | Claude 4 系列（Opus/Sonnet/Haiku/Fable），长上下文与编程能力突出 |
 | DeepSeek | 深度求索 | [chat.deepseek.com](https://chat.deepseek.com/) | DeepSeek-V4 / R1，强推理能力，开源标杆 |
-| 通义千问 | 阿里巴巴 | [tongyi.aliyun.com](https://tongyi.aliyun.com/) | Qwen3.6 系列，国内综合能力领先，全球下载量最大的开源 LLM 家族 |
+| 通义千问 | 阿里巴巴 | [tongyi.aliyun.com](https://tongyi.aliyun.com/) | Qwen3.7 系列，国内综合能力领先，全球下载量最大的开源 LLM 家族 |
 | 文心一言 | 百度 | [yiyan.baidu.com](https://yiyan.baidu.com/) | ERNIE 4.5 / 5.1 系列，中文理解能力突出 |
 | Kimi | 月之暗面 | [kimi.moonshot.cn](https://kimi.moonshot.cn/) | Kimi K2.6，超长上下文处理，Agent 能力强 |
 | 豆包 | 字节跳动 | [www.doubao.com](https://www.doubao.com/) | Doubao 模型，多模态能力强 |
@@ -55,9 +58,10 @@
 
 | 模型 | 开发者 | GitHub | 说明 |
 | ---- | ---- | ---- | ---- |
-| DeepSeek-V4-Pro | 深度求索 | [deepseek-ai/DeepSeek-V3](https://github.com/deepseek-ai/DeepSeek-V3) ⭐103k | 1.6T MoE（49B 激活），100 万上下文，SWE-Bench 80.6%，MIT 开源 |
+| DeepSeek-V4-Pro | 深度求索 | [deepseek-ai/DeepSeek-V3](https://github.com/deepseek-ai/DeepSeek-V3) ⭐103k | 1.6T MoE（49B 激活），100 万上下文，LiveCodeBench 93.5%，MIT 开源 |
 | DeepSeek-R1 | 深度求索 | [deepseek-ai/DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) ⭐92k | 671B MoE，RL 驱动的长链推理，比肩 OpenAI o1，含 1.5B-70B 蒸馏版 |
-| Qwen3.6 | 阿里巴巴 | [QwenLM/Qwen3.6](https://github.com/QwenLM/Qwen3.6) ⭐3.5k | 27B Dense + 35B-A3B MoE，编码能力达旗舰水平 |
+| Qwen3.7-Max | 阿里巴巴 | [QwenLM/Qwen3](https://github.com/QwenLM/Qwen3) ⭐27k | Agent 时代旗舰，代码/工作流自动化/持续自主执行 |
+| Qwen3.6 | 阿里巴巴 | [QwenLM/Qwen3.6](https://github.com/QwenLM/Qwen3.6) ⭐3.5k | 27B Dense + 35B-A3B MoE，编码能力达旗舰水平，Apache 2.0 |
 | Qwen3.5 | 阿里巴巴 | [QwenLM/Qwen3.5](https://github.com/QwenLM/Qwen3.5) ⭐6k | 0.8B-397B 全系列 8 个尺寸，原生多模态，262K 上下文 |
 | Qwen3 | 阿里巴巴 | [QwenLM/Qwen3](https://github.com/QwenLM/Qwen3) ⭐27k | 0.6B-235B，支持思考/非思考模式切换，Apache 2.0 |
 | GLM-5.1 | 智谱 AI (Z.ai) | [zai-org/GLM-5](https://github.com/zai-org/GLM-5) | 754B MoE，SWE-Bench Pro SOTA，开放权重 |
@@ -92,7 +96,7 @@
 | 模型 | 开发者 | GitHub | 说明 |
 | ---- | ---- | ---- | ---- |
 | Qwen3-Coder | 阿里巴巴 | [QwenLM/Qwen3-Coder](https://github.com/QwenLM/Qwen3-Coder) ⭐5k | 480B-A35B MoE，SWE-Bench 编程基准领先 |
-| DeepSeek-Coder V3 | 深度求索 | -- | 基于 V3 的代码生成能力大幅提升 |
+| DeepSeek-V4-Pro | 深度求索 | -- | LiveCodeBench 93.5%，算法编程专家，MIT 开源 |
 
 ---
 
@@ -131,6 +135,10 @@
 | [A Survey of Self-Evolving Agents](https://arxiv.org/abs/2507.21046) | 自进化智能体综述（TMLR 2026） | [Awesome-Self-Evolving-Agents](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents)
 | [SELF: Self-Evolution with Language Feedback](https://arxiv.org/abs/2310.00533) | 通过语言反馈实现 LLM 自我进化 | --
 | [Self-Evolved Reward Learning for LLMs](https://arxiv.org/abs/2411.00418) | 自进化奖励学习，减少人类标注依赖 | --
+| [EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle](https://arxiv.org/abs/2510.16079) | 经验驱动的自进化 Agent 闭环框架 | --
+| [SkillRL: Evolving Agents via Recursive Skill-Augmented RL](https://arxiv.org/abs/2602.08234) | 递归技能增强的 RL 进化 Agent | --
+| [Self-Improvement of LLMs: A Technical Overview](https://arxiv.org/abs/2603.25681) | LLM 自我改进技术综述（2026） | --
+| [QA-GraphRAG: Query-Adaptive Graph RAG](https://hub.baai.ac.cn/view/54807) | 面向图检索增强生成的查询自适应框架（VLDB 2026） | --
 
 ---
 
@@ -147,6 +155,7 @@
 
 - [开源大模型食用指南（self-llm）](https://github.com/datawhalechina/self-llm)：⭐30.8k，针对中文开发者的 Linux 环境下开源模型部署与微调教程，覆盖 50+ 主流模型
 - [从零开始构建大模型（happy-llm）](https://github.com/datawhalechina/happy-llm)：⭐31k，从 NLP 基础到手搓 LLaMA2，涵盖 Pretrain、SFT、PEFT 全流程
+- [DIY-LLM 全栈构建课程](https://github.com/datawhalechina/diy-llm)：Datawhale 出品，覆盖预训练数据工程、Tokenizer、Transformer、MoE、GPU 编程（CUDA/Triton）、分布式训练、Scaling Laws、推理优化及对齐（SFT/RLHF/GRPO），含 6 个渐进式作业
 
 ### 经典微调项目
 
@@ -185,7 +194,8 @@
 
 | 名称 | GitHub | 说明 |
 | ---- | ---- | ---- |
-| OpenRLHF | [OpenRLHF/OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) | 高性能 RLHF/GRPO/PPO 训练框架，支持 70B+ 模型全参训练，Ray + vLLM 加速 |
+| OpenRLHF | [OpenRLHF/OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) ⭐8.9k | 高性能 Agentic RL 框架，Ray + vLLM 加速，支持 PPO/DAPO/REINFORCE++/Async RL/VLM RLHF |
+| OpenRLHF-M | [OpenRLHF/OpenRLHF-M](https://github.com/OpenRLHF/OpenRLHF-M) | 多模态 RLHF 专用框架，支持 Qwen3.5 等视觉语言模型端到端 RL 训练 |
 | TRL | [huggingface/trl](https://github.com/huggingface/trl) | HuggingFace 官方 RL 训练库，支持 PPO/DPO/GRPO/KTO 等多种算法 |
 | veRL | [volcengine/verl](https://github.com/volcengine/verl) | 字节跳动火山引擎出品，灵活的 RL 训练框架，支持 FSDP/Megatron 后端 |
 | DeepSpeed Chat | [microsoft/DeepSpeed](https://github.com/microsoft/DeepSpeed) | 微软一键式 RLHF 训练，InstructGPT 全流程复现 |
@@ -195,16 +205,37 @@
 | 算法 | 说明 | 资源 |
 | ---- | ---- | ---- |
 | RLHF (PPO) | 基于人类反馈的强化学习，ChatGPT 核心技术 | [HuggingFace RLHF 博客](https://huggingface.co/blog/rlhf)、[InstructGPT 论文精读（B站）](https://www.bilibili.com/video/BV1hd4y187CR/) |
-| GRPO | DeepSeek-R1 使用的群体相对策略优化，无需 Critic 模型 | [DeepSeek-R1 论文](https://arxiv.org/abs/2501.12948) |
+| GRPO | DeepSeek-R1 使用的群体相对策略优化，无需 Critic 模型 | [DeepSeek-R1 论文](https://arxiv.org/abs/2501.12948)、[GRPO 深度解析](https://cameronrwolfe.substack.com/p/grpo) |
+| GRPO++ | GRPO 实战技巧集合，让 RL 真正 work | [GRPO++ 技巧详解](https://cameronrwolfe.substack.com/p/grpo-tricks) |
+| REINFORCE++ | ProRL V2 使用的算法，训练 SOTA 推理模型 | [OpenRLHF 文档](https://github.com/OpenRLHF/OpenRLHF) |
 | DPO | 直接偏好优化，将奖励模型"吸收"进 LM 优化目标 | [DPO 原理详解（GitBook）](https://yeasy.gitbook.io/llm_internals/di-er-bu-fen-xun-lian-pian/08_alignment/8.3_dpo) |
 | KTO | 基于 Kahneman-Tversky 的对齐算法，仅需二元反馈 | [TRL 文档](https://huggingface.co/docs/trl/) |
+| Agentic RL | Agent 环境中的 RL 训练，多步交互奖励 | [LLM Post-Training 全景指南](https://qingkeai.online/archives/RLHF-GRPO-AgenticRL) |
 | 对齐技术综述 | RLHF/RLAIF/PPO/DPO 全家桶 | [一文看尽 LLM 对齐技术（CSDN）](https://blog.csdn.net/pythonhy/article/details/141192664) |
+| RL Post-Training 全景 | 从 RLHF 到 GRPO 再到 Agentic RL | [HuggingFace 指南](https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms) |
 
-### 自进化与自我改进
+---
+
+## 自进化与自我改进
+
+自进化（Self-Evolution）是 2025-2026 年 Agent 研究的核心方向，目标是让智能体在无需人类持续干预下自主提升能力。
+
+### 四大进化路径
+
+| 路径 | 说明 | 代表工作 |
+| ---- | ---- | ---- |
+| 模型进化 | Agent 利用自生成数据或学习课程精炼自身参数 | SELF、Self-Evolved Reward Learning |
+| 记忆进化 | 从历史经验中学习，存储并检索以指导未来行动 | Letta/MemGPT、MemSkill |
+| 工具进化 | 自主创建、精炼和复用工具以扩展能力 | SkillRL |
+| 工作流进化 | 自主优化执行流水线和协作结构 | CORAL、EvolveR |
+
+### 核心资源
 
 - [Awesome-Self-Evolving-Agents](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents)：⭐251，自进化 Agent 论文、benchmark 和开源项目合集
 - [自进化 Agent 综述深度解读（中文）](https://xiao-zi-chen.github.io/2026/03/23/self-evolving-agent-survey-deep-dive/)：超详细中文解读，三大范式——模型中心、环境中心、协同进化
 - [hello-generic-agent](https://github.com/datawhalechina/hello-generic-agent)：Datawhale 出品，自进化智能体入门，涵盖记忆系统、上下文压缩、自进化机制
+- [Letta（原 MemGPT）](https://github.com/letta-ai/letta)：⭐21k，有状态 Agent 平台，持久记忆 + 自我改进，Agent 可重写自身记忆/技能/提示
+- [VoltAgent/awesome-ai-agent-papers](https://github.com/VoltAgent/awesome-ai-agent-papers)：2026 年 AI Agent 研究论文精选合集，涵盖记忆、评估、工作流、自主系统
 
 ---
 
@@ -221,15 +252,17 @@
 
 | 名称 | 说明 | 资源 |
 | ---- | ---- | ---- |
-| vLLM | 高性能 LLM 推理引擎，PagedAttention 技术，DeepSeek V3/R1 主力推理框架 | [vLLM GitHub](https://github.com/vllm-project/vllm) |
-| SGLang | RadixAttention，多轮对话吞吐量比 vLLM 高 5 倍 | [SGLang GitHub](https://github.com/sgl-project/sglang) |
-| TensorRT-LLM | NVIDIA 官方推理优化，FP8/INT4 量化 | [TensorRT-LLM GitHub](https://github.com/NVIDIA/TensorRT-LLM) |
+| vLLM | 高性能 LLM 推理引擎，PagedAttention + Continuous Batching，显存利用率 95%，企业级高并发首选 | [vLLM GitHub](https://github.com/vllm-project/vllm) |
+| SGLang | RadixAttention 实现 KV 缓存复用，多轮对话吞吐量比 vLLM 高 5 倍，Agent 场景理想选择 | [SGLang GitHub](https://github.com/sgl-project/sglang) |
+| TensorRT-LLM | NVIDIA 官方推理优化，FP8/INT4 量化，Blackwell 架构原生支持 | [TensorRT-LLM GitHub](https://github.com/NVIDIA/TensorRT-LLM) |
+| LMDeploy | 上海 AI 实验室出品，支持量化部署和推理加速 | [LMDeploy GitHub](https://github.com/InternLM/lmdeploy) |
 
 ### 推理优化教程
 
 - [vLLM vs SGLang vs TensorRT-LLM 综合对比（阿里云）](https://developer.aliyun.com/article/1686693)：三大框架技术原理、性能基准与选型建议
 - [主流大模型推理部署框架全解析（知乎）](https://zhuanlan.zhihu.com/p/1937266323156607848)：一文梳理主流框架
 - [大模型推理加速全景技术指南（博客园）](https://www.cnblogs.com/SVicen/p/19281160)：全面梳理量化、剪枝、蒸馏等优化技术栈
+- [八大推理引擎横向拆解](https://quant67.com/post/llm-infra/13-vllm-sglang/13-vllm-sglang.html)：vLLM/SGLang/TensorRT-LLM/TGI/LMDeploy/MindIE 从架构到性能全面对比
 - [InfiniTensor CUDA 训练营](https://github.com/InfiniTensor/Learning-CUDA)：启元实验室 + 清华大学，大模型推理相关 CUDA 编程实战
 
 ---
@@ -253,12 +286,27 @@
 
 | 名称 | GitHub | 说明 |
 | ---- | ---- | ---- |
-| RAGFlow | [infiniflow/ragflow](https://github.com/infiniflow/ragflow) ⭐82k | 深度文档理解 RAG 引擎，支持多模态 PDF 解析 |
+| RAGFlow | [infiniflow/ragflow](https://github.com/infiniflow/ragflow) ⭐82k | 深度文档理解 RAG 引擎，支持多模态 PDF 解析，内置 Agent 能力 |
 | LlamaIndex | [run-llama/llama_index](https://github.com/run-llama/llama_index) ⭐50k | 数据框架，支持结构化/非结构化数据索引与检索 |
 | Langchain-Chatchat | [chatchat-space/Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat) ⭐37.5k | 中文 RAG 与 Agent 应用，支持 ChatGLM/Qwen/Llama 等国产模型 |
-| LightRAG | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) ⭐28k | 轻量级图谱 RAG（EMNLP 2025），适合法律/医疗/金融领域 |
 | GraphRAG | [microsoft/graphrag](https://github.com/microsoft/graphrag) ⭐33.6k | 微软模块化图 RAG，基于知识图谱做全局摘要和社区检测 |
+| LightRAG | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) ⭐28k | 轻量级图谱 RAG（EMNLP 2025），适合法律/医疗/金融领域 |
 | QAnything | [netease-youdao/QAnything](https://github.com/netease-youdao/QAnything) ⭐14k | 网易有道，支持任意格式文件的本地知识库问答 |
+
+### 2026 RAG 技术趋势
+
+2026 年 RAG 技术正经历三大创新范式转变：
+
+| 方向 | 说明 | 代表项目 |
+| ---- | ---- | ---- |
+| GraphRAG | 通过知识图谱实现多跳推理 | [microsoft/graphrag](https://github.com/microsoft/graphrag)、[QA-GraphRAG（VLDB 2026）](https://hub.baai.ac.cn/view/54807) |
+| Agentic RAG | 将检索集成到 Agent 决策循环中 | RAGFlow + Agent、Dify 工作流 |
+| Memory-Augmented RAG | 建立长期记忆系统，上下文 + 检索 + 推理统一 | Letta、WeKnora |
+
+### RAG 学习教程
+
+- [All-in-RAG（RAG 技术全栈指南）](https://github.com/datawhalechina/all-in-rag)：⭐2.5k，Datawhale 出品，系统化 RAG 全栈教程，从理论到生产级系统
+- [Agentic RAG 3.0 核心升级点全解析（腾讯云）](https://cloud.tencent.com/developer/article/2650548)：百万上下文 + 多模态 GraphRAG + Agentic 检索
 
 ### 向量数据库
 
@@ -295,13 +343,15 @@
 | CrewAI | CrewAI Inc. | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) ⭐44k | 基于角色的多 Agent 团队协作，上手最快 |
 | Agno | Agno | [agno-agi/agno](https://github.com/agno-agi/agno) ⭐29k | 多 Agent 框架，含运行时和控制面板 |
 | LangGraph | LangChain Inc. | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) ⭐25k | 基于图的有状态 Agent 工作流，适合复杂多步骤任务 |
+| Letta | Letta AI | [letta-ai/letta](https://github.com/letta-ai/letta) ⭐21k | 有状态 Agent 平台（原 MemGPT），持久记忆 + 自主学习进化 |
 | PydanticAI | Pydantic | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) ⭐16k | 类型安全 Agent 框架，FastAPI 风格 |
 
 ### Agent 学习教程
 
-- [从零开始构建智能体（hello-agents）](https://github.com/datawhalechina/hello-agents)：⭐59.1k，Datawhale 出品，覆盖 ReAct 范式、Coze、LangGraph、多智能体协作
+- [从零开始构建智能体（hello-agents）](https://github.com/datawhalechina/hello-agents)：⭐59.1k，Datawhale 出品，覆盖 ReAct 范式、Coze、LangGraph、多智能体协作、Agentic RL
 - [Agentic AI 中文教程](https://github.com/datawhalechina/agentic-ai)：吴恩达 DeepLearning.AI Agentic AI 系列课程中文翻译与知识整理
-- [AI Agent 速成指南](https://github.com/didilili/ai-agents-from-zero)：系统教程 + 实战项目，覆盖 LangChain / LangGraph / Coze / Dify / MCP
+- [AI Agent 速成指南](https://github.com/didilili/ai-agents-from-zero)：系统教程 + 实战项目，覆盖 LangChain / LangGraph / Coze / Dify / MCP，含 NL2SQL 和 DeepAgents 多 Agent 项目
+- [Agency-Agents-ZH](https://github.com/jnMetaCode/agency-agents-zh)：266 个即插即用 AI 专家角色，支持 18 种工具，含 50 个中国市场原创智能体（小红书/抖音/微信/飞书/钉钉）
 - [Agent-Learning-Hub](https://github.com/datawhalechina/Agent-Learning-Hub)：AI Agent 学习路线与资料库
 - [AI Agent 开发指南（AgentGuide）](https://github.com/adongwanai/AgentGuide)：LangGraph 实战、高级 RAG、大模型面试题库
 - [LangChain 中文入门教程](https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide)：LangChain 中文入门指南
@@ -311,13 +361,70 @@
 
 ## MCP 资源
 
-[Model Context Protocol（MCP）](https://modelcontextprotocol.io/) 是 Anthropic 发起的开放协议，2025 年 12 月捐赠给 Linux 基金会旗下 Agentic AI Foundation。截至 2026 年 3 月已有 10,000+ 活跃公共 MCP 服务器，OpenAI、Microsoft、AWS 先后接入。
+[Model Context Protocol（MCP）](https://modelcontextprotocol.io/) 是 Anthropic 发起的开放协议，现由 Linux 基金会旗下 Agentic AI Foundation 托管。截至 2026 年中已有 17,000+ 活跃公共 MCP 服务器，SDK 月下载量超 9,700 万次。OpenAI、Microsoft、AWS、Google 先后接入。
+
+### MCP 规范演进
+
+| 版本 | 时间 | 关键特性 |
+| ---- | ---- | ---- |
+| 2025-11-25 (稳定版) | 2025.11 | OpenID Connect 发现、工具/资源/Prompt 图标元数据 |
+| 2026-07-28 (RC) | 2026.07 | 无状态协议核心、Extensions 框架、Tasks、MCP Apps、授权强化 |
+
+### 学习资源
 
 - [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)：⭐89k，全球最大 MCP 服务器合集，收录 9200+ 服务器
 - [Awesome-MCP-ZH](https://github.com/yzfly/awesome-mcp-zh)：MCP 中文资源精选，含指南、Servers、Clients 汇总
-- [MCP 中文文档](https://mcp.fleeto.us/)：MCP 规范 2025-03-26 版完整中文翻译
+- [MCP 中文文档](https://mcp.fleeto.us/)：MCP 规范完整中文翻译
 - [MCP 中文站](https://mcpcn.com/)：MCP 入门介绍与生态导航
 - [MCP 编程极速入门](https://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide)：面向开发者的 MCP 快速上手指南
+- [MCP 2026 路线图解读](https://chenguangliang.com/posts/blog088_mcp-2026-roadmap-analysis/)：从本地工具到生产级 Agent 基础设施的演进分析
+
+---
+
+## A2A 协议资源
+
+[Agent2Agent（A2A）协议](https://google.github.io/A2A/) 是 Google 发起的开放标准，用于标准化 AI Agent 之间的通信与协作。MCP 解决"LLM 如何访问数据和工具"，A2A 解决"Agent 如何与其他 Agent 对话"。
+
+### 核心概念
+
+| 概念 | 说明 |
+| ---- | ---- |
+| AgentCard | Agent 能力声明与发现机制 |
+| Task | Agent 间通信的基本工作单元 |
+| Artifact | Agent 交互产生的输出制品 |
+| Message | Agent 间通信的消息格式 |
+
+### 学习资源
+
+- [A2A 协议中文站](https://a2acn.com/docs/introduction/)：协议介绍、快速开始、API 参考
+- [A2A 协议完全指南（2026）](https://pengjiyuan.github.io/articles/a2a-protocol-2026/)：核心概念、Agent Card 机制、与 MCP 关系、实战开发
+- [A2A 协议技术细节分析（知乎）](https://zhuanlan.zhihu.com/p/1893578344324379306)：Google A2A 技术细节与 MCP 关系
+- [使用 ADK 实现 A2A Agent 完整开发指南](https://www.cnblogs.com/sing1ee/p/18985838/adk-a2a)：环境搭建、项目结构、服务端/客户端 Agent 开发
+- [DeepLearning.AI A2A 课程](https://www.deeplearning.ai/courses/a2a-the-agent2agent-protocol)：官方入门课程
+- [Google Codelabs: Getting Started with MCP, ADK and A2A](https://codelabs.developers.google.com/codelabs/currency-agent)：动手实验
+
+---
+
+## 上下文工程（Context Engineering）
+
+上下文工程是 2026 年 LLM 应用开发的核心范式，通过系统化设计和管理 LLM 的输入上下文来最大化模型能力输出，是 Prompt 工程的全面升级。
+
+### 五大核心策略
+
+| 策略 | 说明 |
+| ---- | ---- |
+| Offload（转移） | 将复杂任务分解转移到多个上下文窗口 |
+| Reduce（压缩） | 压缩冗余信息，保留关键语义 |
+| Retrieve（检索） | 动态检索相关上下文注入 |
+| Isolate（隔离） | 隔离不同类型上下文防止干扰 |
+| Cache（缓存） | 缓存常用上下文片段提升效率 |
+
+### 学习资源
+
+- [大模型上下文工程权威指南](https://yeasy.gitbook.io/context_engineering_guide)：15 章全面教程，涵盖核心技术、高级架构和工程实践
+- [上下文工程：重塑大模型智能系统的技术革命](https://www.gogoai.com/blog/context-engineering/)：一文读懂技术全景
+- [上下文工程解决 Agent 性能瓶颈](https://modelscope.csdn.net/68f6fe60a6dc56200e95f911.html)：大模型开发者必看实践指南
+- [Harness Engineering（驾驭工程）](https://www.runoob.com/ai-agent/harness-engineering.html)：2026 年新范式，设计约束、反馈环和控制系统
 
 ---
 
@@ -325,12 +432,17 @@
 
 | 名称 | 开发者 | 链接 | 说明 |
 | ---- | ---- | ---- | ---- |
-| TRAE | 字节跳动 | [Trae-AI/TRAE](https://github.com/Trae-AI/TRAE) | AI 原生 IDE，600 万+ 注册用户，免费 GPT-4 和 Claude 访问，SOLO 模式自动编程 |
+| Claude Code | Anthropic | [claude.ai/code](https://claude.ai/code) | 终端 Agent，支持文件系统/终端/MCP 全访问，FrontierCode 基准领先 |
+| Cursor | Anysphere | [cursor.com](https://www.cursor.com/) | AI 代码编辑器，3.3 版新增 Bugbot 自动修复和 Cloud Agent 后台运行 |
+| TRAE | 字节跳动 | [Trae-AI/TRAE](https://github.com/Trae-AI/TRAE) | AI 原生 IDE，600 万+ 注册用户，SOLO 模式端到端自动编程 |
+| OpenAI Codex | OpenAI | [openai.com/codex](https://openai.com/codex) | 400 万周活跃用户，GPT-5.5 驱动，400K 上下文，90+ 第一方插件 |
 | Qoder | 阿里巴巴 | [qoder.alibaba.com](https://qoder.alibaba.com) | 智能体编程平台，500 万+ 用户，Quest 模式支持 Agent 自主开发 |
 | 通义灵码 | 阿里巴巴 | [lingma.aliyun.com](https://lingma.aliyun.com) | 基于 Qwen 的 AI 编程助手，VS Code + JetBrains，百万级上下文 |
 | 文心快码 (Comate) | 百度 | [comate.baidu.com](https://comate.baidu.com) | 100+ 编程语言支持，SPEC 规范驱动模式 |
-| Cursor | Anysphere | [cursor.com](https://www.cursor.com/) | AI 代码编辑器，全球开发者首选 |
-| Claude Code | Anthropic | [claude.ai/code](https://claude.ai/code) | Anthropic 官方 CLI 编程工具，Agent 模式开发 |
+
+### 2026 AI 编程趋势
+
+2026 年 AI 编程的核心变化：Cloud Agent 后台自主运行（关掉笔记本仍在工作），团队常见模式为 Cursor 做主动开发 + Claude Code 做委托任务（重构/迁移/测试回填）。
 
 ---
 
@@ -350,6 +462,7 @@
 | 【李宏毅】2026 春季机器学习 | 最新版，涵盖生成式 AI 时代下的 ML，含 Context Engineering | [课程主页](https://speech.ee.ntu.edu.tw/~hylee/ml/2026-spring.php)
 | 【李宏毅】2025 生成式 AI 导论 | 42 集全，涵盖 LLM、AI Agent、神经网络等 | [B站](https://www.bilibili.com/video/BV1mXpuz7E9v/)
 | 【吴恩达】LLM 大模型教程（2025） | 大模型入门到进阶，附课件代码 | [B站](https://www.bilibili.com/video/BV1sMEyzhEM3/)
+| 【吴恩达】Agentic AI 智能体课程（2026） | 最新 Agent 开发课程，含 A2A 协议实践 | [DeepLearning.AI](https://www.deeplearning.ai/courses/a2a-the-agent2agent-protocol)
 | 【清华 NLP】刘知远大模型公开课 | 20 小时从入门到精通，含交叉领域应用 | [B站](https://www.bilibili.com/video/BV1UG411p7zv/)
 | 【黑马程序员】大模型 RAG 与 Agent 实战 | 基于 LangChain 从提示词到 RAG+Agent 项目实战 | [B站](https://www.bilibili.com/video/BV1yjz5BLEoY/)
 | Stanford CS336 | 2026 春季，从零构建语言模型，注重动手实践 | [课程主页](https://cs336.stanford.edu/)
@@ -391,10 +504,23 @@
 
 ## LLM 安全与对齐
 
+### 安全研究
+
 - [LLM Safety 最新论文推介系列（知乎）](https://zhuanlan.zhihu.com/p/1995509051832943275)：持续更新的中文 LLM 安全论文精读
 - [SafetyBench](https://github.com/thu-coai/SafetyBench)：清华 COAI 出品，11,435 题覆盖 7 类安全问题
+- [M3-SafetyBench](http://scis.scichina.com/cn/2025/SSI-2025-0254.pdf)：17 万+ 条目中文大模型内容安全评估数据集
+- [AIRTBench](https://www.secrss.com/articles/80190)：衡量大语言模型的自主 AI 红队能力
+
+### 对齐技术
+
 - [多模态大模型 RLHF/DPO 全面解读（知乎）](https://zhuanlan.zhihu.com/p/20311517814)：SFT/RLHF/RLAIF/DPO 在多模态场景的应用
 - [大模型对齐技术综述（CSDN）](https://blog.csdn.net/pythonhy/article/details/141192664)：一文看尽 RLHF/RLAIF/PPO/DPO 全家桶
+
+### 越狱攻防
+
+- [Weak-to-Strong Jailbreaking（ICML 2025）](https://blog.csdn.net/qq_33583069/article/details/156804484)：利用小模型引导大模型生成有害内容，ASR 超 99%
+- [ALERT 零样本越狱检测框架](https://zhuanlan.zhihu.com/p/1992965841180959576)：从层级/模块级/token 级三粒度实现早期无侵入检测
+- [自动化红队测试基准](https://adg.csdn.net/6952477f5b9f5f31781b56bd.html)：Garak/AdvGLUE 等主流 LLM 安全评估框架解析
 
 ---
 
