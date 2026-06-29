@@ -6,7 +6,7 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 6 月
+> 最近更新：2026 年 6 月 29 日
 
 ---
 
@@ -48,6 +48,7 @@
 | 豆包 | 字节跳动 | [www.doubao.com](https://www.doubao.com/) | Doubao 模型，多模态能力强 |
 | 智谱清言 | 智谱 AI (Z.ai) | [chatglm.cn](https://chatglm.cn/) | GLM-5.1 系列，清华技术背景，MoE 架构 |
 | 腾讯元宝 | 腾讯 | [yuanbao.tencent.com](https://yuanbao.tencent.com/) | 混元大模型，集成微信生态 |
+| 小米 MiMo | 小米 | [mimo.mi.com](https://mimo.mi.com/) | MiMo-V2.5 系列，推理与 Agent 能力突出，MIT 开源 |
 | MiniMax (海螺 AI) | 稀宇科技 | [hailuoai.com](https://hailuoai.com/) | MiniMax-M3，原生多模态，100 万 token 上下文 |
 
 ---
@@ -66,7 +67,9 @@
 | Qwen3 | 阿里巴巴 | [QwenLM/Qwen3](https://github.com/QwenLM/Qwen3) ⭐27k | 0.6B-235B，支持思考/非思考模式切换，Apache 2.0 |
 | GLM-5.1 | 智谱 AI (Z.ai) | [zai-org/GLM-5](https://github.com/zai-org/GLM-5) | 754B MoE，SWE-Bench Pro SOTA，开放权重 |
 | GLM-4-32B | 智谱 AI | [zai-org/GLM-4](https://github.com/zai-org/GLM-4) ⭐3k | 含 GLM-Z1 推理模型和 Rumination 深度沉思模型，MIT 开源 |
-| Kimi K2.6 | 月之暗面 | [MoonshotAI/Kimi-K2](https://github.com/MoonshotAI/Kimi-K2) ⭐11k | 1T MoE（32B 激活），SWE-Bench Pro 58.6%，开放权重 |
+| DeepSeek-V4-Flash | 深度求索 | [deepseek-ai/DeepSeek-V3](https://github.com/deepseek-ai/DeepSeek-V3) ⭐103k | 284B MoE（13B 激活），100 万上下文，高性价比混合推理模型 |
+| Kimi K2.7 Code | 月之暗面 | [MoonshotAI/Kimi-K2](https://github.com/MoonshotAI/Kimi-K2) ⭐18k | 1T MoE，编程性价比最高，推理 token 降 30%，MCP 工具调用提升显著 |
+| MiMo-V2.5-Pro | 小米 | [XiaomiMiMo/MiMo-V2-Flash](https://github.com/XiaomiMiMo/MiMo-V2-Flash) | 309B MoE（A15B），推理与 Agent 性能接近 Kimi-K2-Thinking，MIT 开源 |
 | MiniMax-M3 | 稀宇科技 | -- | 原生多模态旗舰，稀疏注意力支持 100 万上下文，视频理解 + 编码 + Agent |
 | LLaMA 4 | Meta | [meta-llama/llama-models](https://github.com/meta-llama/llama-models) | 全球最流行的开源基座模型 |
 
@@ -78,6 +81,7 @@
 | MiniCPM-o 4.5 | 清华 OpenBMB | [OpenBMB/MiniCPM-V](https://github.com/OpenBMB/MiniCPM-V) ⭐25.4k | 8B 全能多模态，全双工音视频对话，手机端可运行 |
 | Qwen3.5-0.8B/2B | 阿里巴巴 | [QwenLM/Qwen3.5](https://github.com/QwenLM/Qwen3.5) | 轻量原生多模态，适合边缘部署 |
 | DeepSeek-R1-Distill | 深度求索 | [deepseek-ai/DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) | 1.5B/7B/8B/14B/32B/70B 蒸馏版，推理能力平民化 |
+| MiMo-V2-Flash | 小米 | [XiaomiMiMo/MiMo-V2-Flash](https://github.com/XiaomiMiMo/MiMo-V2-Flash) | 309B MoE（A15B），高效推理与 Agent 端侧模型，MIT 开源 |
 
 ### 多模态模型
 
@@ -96,7 +100,9 @@
 | 模型 | 开发者 | GitHub | 说明 |
 | ---- | ---- | ---- | ---- |
 | Qwen3-Coder | 阿里巴巴 | [QwenLM/Qwen3-Coder](https://github.com/QwenLM/Qwen3-Coder) ⭐5k | 480B-A35B MoE，SWE-Bench 编程基准领先 |
+| Kimi K2.7 Code | 月之暗面 | [MoonshotAI/Kimi-K2](https://github.com/MoonshotAI/Kimi-K2) ⭐18k | 1T MoE 编程专用，推理 token 降 30%，编程性价比最高的开源模型 |
 | DeepSeek-V4-Pro | 深度求索 | -- | LiveCodeBench 93.5%，算法编程专家，MIT 开源 |
+| MiMo Code | 小米 | [XiaomiMiMo/MiMo-Code](https://github.com/XiaomiMiMo/MiMo-Code) | 小米终端 AI 编程助手，MIT 开源 |
 
 ---
 
@@ -139,6 +145,9 @@
 | [SkillRL: Evolving Agents via Recursive Skill-Augmented RL](https://arxiv.org/abs/2602.08234) | 递归技能增强的 RL 进化 Agent | --
 | [Self-Improvement of LLMs: A Technical Overview](https://arxiv.org/abs/2603.25681) | LLM 自我改进技术综述（2026） | --
 | [QA-GraphRAG: Query-Adaptive Graph RAG](https://hub.baai.ac.cn/view/54807) | 面向图检索增强生成的查询自适应框架（VLDB 2026） | --
+| [DeepSeek-V4 Technical Report](https://www.qbitai.com/2026/04/406809.html) | DeepSeek-V4 1.6T MoE 架构，100 万上下文，484 天换代全公开 | [GitHub](https://github.com/deepseek-ai/DeepSeek-V3)
+| [InfiAgent: Self-Evolving Pyramid Agent](https://arxiv.org/abs/2509.22502) | DAG 金字塔多 Agent 框架，agent-as-a-tool 自演化机制 | --
+| [Self-Evolving Agents 综述（IEEE CIM 2026）](https://zhuanlan.zhihu.com/p/2046485780617506861) | 近 400 篇文献，统一自进化 Agent 学术定义与四大分支 | --
 
 ---
 
@@ -149,13 +158,17 @@
 - [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory)：⭐72k，一站式 LLM 微调框架，支持 100+ 模型（Qwen、DeepSeek、LLaMA、GLM 等），提供 LoRA/QLoRA/全参微调，内置 WebUI，ACL 2024 论文
 - [Colossal Chat](https://github.com/hpcaitech/ColossalAI/tree/main/applications/Chat)：基于 LLaMA 的完整 RLHF 训练流程，支持 DeepSeek-V3/R1 LoRA 微调
 - [DeepSpeed Chat](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-chat/chinese)：微软官方开源，一键式 RLHF 训练——[训练代码](https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat)
-- [ms-swift](https://github.com/modelscope/ms-swift)：阿里 ModelScope 出品的 LLM/VLM 训练推理框架，深度集成 EvalScope 评测
+- [ms-swift v4.0](https://github.com/modelscope/ms-swift)：阿里 ModelScope 出品，2026 年 3 月发布 v4.0 大版本，支持 600+ LLM 和 300+ 多模态模型，含 GRPO/GKD 训练（AAAI 2025 论文）
 
 ### 微调教程
 
 - [开源大模型食用指南（self-llm）](https://github.com/datawhalechina/self-llm)：⭐30.8k，针对中文开发者的 Linux 环境下开源模型部署与微调教程，覆盖 50+ 主流模型
 - [从零开始构建大模型（happy-llm）](https://github.com/datawhalechina/happy-llm)：⭐31k，从 NLP 基础到手搓 LLaMA2，涵盖 Pretrain、SFT、PEFT 全流程
 - [DIY-LLM 全栈构建课程](https://github.com/datawhalechina/diy-llm)：Datawhale 出品，覆盖预训练数据工程、Tokenizer、Transformer、MoE、GPU 编程（CUDA/Triton）、分布式训练、Scaling Laws、推理优化及对齐（SFT/RLHF/GRPO），含 6 个渐进式作业
+- [MiniMind](https://github.com/jingyaogong/minimind)：⭐40k+，2 小时从零训练 64M 参数 LLM，覆盖 Pretrain/SFT/LoRA/RLHF-DPO/RLAIF（PPO/GRPO/SPO）/Agentic RL 全流程代码，含视觉版 [MiniMind-V](https://github.com/jingyaogong/minimind-v) 和全模态版 [MiniMind-O](https://github.com/jingyaogong/minimind-o)
+- [NLP 到 LLM 算法全栈教程（base-llm）](https://github.com/datawhalechina/base-llm)：Datawhale 出品，从 NLP 基础到 LLM 的算法全栈教程，含 RLHF 专题
+- [大模型算法实战教程（llm-algo-leetcode）](https://github.com/datawhalechina/llm-algo-leetcode)：面向大模型入门到进阶的算法实战，覆盖原理讲解、测试用例与 CUDA/Triton 实战
+- [LLM/RL 算法原理图（LLM-RL-Visualized）](https://github.com/changyeyu/LLM-RL-Visualized)：100+ 原创 LLM/RL 原理图，涵盖 Transformer/SFT/DPO/GRPO/RLHF/RAG，配套《大模型算法》书籍
 
 ### 经典微调项目
 
@@ -212,7 +225,10 @@
 | KTO | 基于 Kahneman-Tversky 的对齐算法，仅需二元反馈 | [TRL 文档](https://huggingface.co/docs/trl/) |
 | Agentic RL | Agent 环境中的 RL 训练，多步交互奖励 | [LLM Post-Training 全景指南](https://qingkeai.online/archives/RLHF-GRPO-AgenticRL) |
 | 对齐技术综述 | RLHF/RLAIF/PPO/DPO 全家桶 | [一文看尽 LLM 对齐技术（CSDN）](https://blog.csdn.net/pythonhy/article/details/141192664) |
+| RLVR | 基于可验证奖励的 RL，2026 年新方向 | [LLM Post-Training 全景指南](https://qingkeai.online/archives/RLHF-GRPO-AgenticRL) |
 | RL Post-Training 全景 | 从 RLHF 到 GRPO 再到 Agentic RL | [HuggingFace 指南](https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms) |
+| MiniMind RL 全流程 | 从零实现 RLHF/DPO/PPO/GRPO/Agentic RL | [MiniMind GitHub](https://github.com/jingyaogong/minimind) |
+| LLM-RL 可视化原理图 | 100+ 原创原理图，直观理解 RL 算法 | [LLM-RL-Visualized](https://github.com/changyeyu/LLM-RL-Visualized) |
 
 ---
 
@@ -229,10 +245,19 @@
 | 工具进化 | 自主创建、精炼和复用工具以扩展能力 | SkillRL |
 | 工作流进化 | 自主优化执行流水线和协作结构 | CORAL、EvolveR |
 
+### 前沿论文
+
+| 名称 | 说明 | 资源 |
+| ---- | ---- | ---- |
+| 自进化 Agent 综述（IEEE CIM 2026） | 统一学术定义，划分单体经验闭环/技能演化/多体协同/元算法开放进化四大分支，汇总近 400 篇文献 | [知乎解读](https://zhuanlan.zhihu.com/p/2046485780617506861) |
+| 自进化 Agent 综述（TMLR 2026） | 77 页综述，系统回答"什么/何时/如何/哪里进化"，迈向人工超级智能 | [arXiv](https://arxiv.org/abs/2507.21046) |
+| InfiAgent（arXiv 2025） | 基于 DAG 的金字塔多 Agent 框架，agent-as-a-tool 机制，双重审计 + 智能路由 + 自演化 | [论文](https://arxiv.org/abs/2509.22502) |
+
 ### 核心资源
 
 - [Awesome-Self-Evolving-Agents](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents)：⭐251，自进化 Agent 论文、benchmark 和开源项目合集
 - [自进化 Agent 综述深度解读（中文）](https://xiao-zi-chen.github.io/2026/03/23/self-evolving-agent-survey-deep-dive/)：超详细中文解读，三大范式——模型中心、环境中心、协同进化
+- [Self-Evolving Agent 经典论文介绍（知乎）](https://zhuanlan.zhihu.com/p/2046485780617506861)：2026 年经典论文汇总与技术路线分析
 - [hello-generic-agent](https://github.com/datawhalechina/hello-generic-agent)：Datawhale 出品，自进化智能体入门，涵盖记忆系统、上下文压缩、自进化机制
 - [Letta（原 MemGPT）](https://github.com/letta-ai/letta)：⭐21k，有状态 Agent 平台，持久记忆 + 自我改进，Agent 可重写自身记忆/技能/提示
 - [VoltAgent/awesome-ai-agent-papers](https://github.com/VoltAgent/awesome-ai-agent-papers)：2026 年 AI Agent 研究论文精选合集，涵盖记忆、评估、工作流、自主系统
@@ -295,7 +320,7 @@
 
 ### 2026 RAG 技术趋势
 
-2026 年 RAG 技术正经历三大创新范式转变：
+2026 年 RAG 已进入"Agentic RAG"时代——检索不再是单次流程，而是"思考→检索→再思考→再检索→行动"的循环。三大创新范式：
 
 | 方向 | 说明 | 代表项目 |
 | ---- | ---- | ---- |
@@ -307,6 +332,8 @@
 
 - [All-in-RAG（RAG 技术全栈指南）](https://github.com/datawhalechina/all-in-rag)：⭐2.5k，Datawhale 出品，系统化 RAG 全栈教程，从理论到生产级系统
 - [Agentic RAG 3.0 核心升级点全解析（腾讯云）](https://cloud.tencent.com/developer/article/2650548)：百万上下文 + 多模态 GraphRAG + Agentic 检索
+- [2026 年 RAG 技术最新进展与落地实践](https://segmentfault.com/a/1190000047621497)：从向量检索到 GraphRAG 与 Agentic RAG 的演进
+- [RAG 技术演进全解析（CSDN）](https://gitcode.csdn.net/69d1bbcf0a2f6a37c59d17da.html)：2026 年 RAG 从向量检索到 GraphRAG 与 Agentic RAG
 
 ### 向量数据库
 
@@ -339,11 +366,13 @@
 | ---- | ---- | ---- | ---- |
 | AutoGPT | Significant Gravitas | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) ⭐170k | AI Agent 运动先驱，含可视化工作流构建器 |
 | LangChain | LangChain Inc. | [langchain-ai/langchain](https://github.com/langchain-ai/langchain) ⭐123k | LLM 应用开发框架，生态最成熟，有[中文文档](https://python.langchain.com.cn/docs/) |
+| OpenHands | All Hands AI | [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) ⭐78k | 开源 AI 编程 Agent（原 OpenDevin），SWE-Bench Verified 53%+，MIT 开源 |
 | AutoGen | Microsoft | [microsoft/autogen](https://github.com/microsoft/autogen) ⭐53k | 多 Agent 对话式协作，已升级为 Microsoft Agent Framework |
 | CrewAI | CrewAI Inc. | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) ⭐44k | 基于角色的多 Agent 团队协作，上手最快 |
 | Agno | Agno | [agno-agi/agno](https://github.com/agno-agi/agno) ⭐29k | 多 Agent 框架，含运行时和控制面板 |
 | LangGraph | LangChain Inc. | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) ⭐25k | 基于图的有状态 Agent 工作流，适合复杂多步骤任务 |
 | Letta | Letta AI | [letta-ai/letta](https://github.com/letta-ai/letta) ⭐21k | 有状态 Agent 平台（原 MemGPT），持久记忆 + 自主学习进化 |
+| smolagents | Hugging Face | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Code-first Agent 框架，Agent 直接写 Python 而非 JSON 工具调用，轻量简洁 |
 | PydanticAI | Pydantic | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) ⭐16k | 类型安全 Agent 框架，FastAPI 风格 |
 
 ### Agent 学习教程
@@ -355,13 +384,14 @@
 - [Agent-Learning-Hub](https://github.com/datawhalechina/Agent-Learning-Hub)：AI Agent 学习路线与资料库
 - [AI Agent 开发指南（AgentGuide）](https://github.com/adongwanai/AgentGuide)：LangGraph 实战、高级 RAG、大模型面试题库
 - [LangChain 中文入门教程](https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide)：LangChain 中文入门指南
+- [Agentic AI 框架终极指南（火山引擎）](https://adg.csdn.net/69533d4f5b9f5f31781bfe2b.html)：20 大框架超详细分析，含选型建议
 - [LangChain 500 页中文文档](https://www.langchain.asia/)：跟随官方同步更新
 
 ---
 
 ## MCP 资源
 
-[Model Context Protocol（MCP）](https://modelcontextprotocol.io/) 是 Anthropic 发起的开放协议，现由 Linux 基金会旗下 Agentic AI Foundation 托管。截至 2026 年中已有 17,000+ 活跃公共 MCP 服务器，SDK 月下载量超 9,700 万次。OpenAI、Microsoft、AWS、Google 先后接入。
+[Model Context Protocol（MCP）](https://modelcontextprotocol.io/) 是 Anthropic 发起的开放协议，现由 Linux 基金会旗下 Agentic AI Foundation 托管。截至 2026 年中已有 19,800+ 活跃公共 MCP 服务器，SDK 月下载量超 9,700 万次。OpenAI、Microsoft、AWS、Google 先后接入。2026-07-28 RC 版本实现协议无状态核心，远程服务器可在普通负载均衡器后运行。
 
 ### MCP 规范演进
 
@@ -422,6 +452,10 @@
 ### 学习资源
 
 - [大模型上下文工程权威指南](https://yeasy.gitbook.io/context_engineering_guide)：15 章全面教程，涵盖核心技术、高级架构和工程实践
+- [Context Engineering 完整中文教程](https://github.com/xjthy001/Context-Engineering-CN)：750K+ 字，涵盖 RAG 系统/记忆架构/多智能体/认知工具/神经场论，含 12 周学习路径和即用模板
+- [Awesome Context Engineering](https://github.com/yzfly/awesome-context-engineering)：上下文工程论文、工具和最佳实践精选合集
+- [上下文工程实战指南](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering)：大模型应用开发骨架思路，上下文工程为设计原则、Agent Harness 为构建目标
+- [AWS 上下文工程实践](https://aws.amazon.com/cn/blogs/china/agentic-ai-infrastructure-practice-series-nine-context-engineering/)：Agentic AI 基础设施系列，结合 AWS Bedrock 的企业级实践
 - [上下文工程：重塑大模型智能系统的技术革命](https://www.gogoai.com/blog/context-engineering/)：一文读懂技术全景
 - [上下文工程解决 Agent 性能瓶颈](https://modelscope.csdn.net/68f6fe60a6dc56200e95f911.html)：大模型开发者必看实践指南
 - [Harness Engineering（驾驭工程）](https://www.runoob.com/ai-agent/harness-engineering.html)：2026 年新范式，设计约束、反馈环和控制系统
@@ -439,6 +473,7 @@
 | Qoder | 阿里巴巴 | [qoder.alibaba.com](https://qoder.alibaba.com) | 智能体编程平台，500 万+ 用户，Quest 模式支持 Agent 自主开发 |
 | 通义灵码 | 阿里巴巴 | [lingma.aliyun.com](https://lingma.aliyun.com) | 基于 Qwen 的 AI 编程助手，VS Code + JetBrains，百万级上下文 |
 | 文心快码 (Comate) | 百度 | [comate.baidu.com](https://comate.baidu.com) | 100+ 编程语言支持，SPEC 规范驱动模式 |
+| OpenHands | All Hands AI | [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) ⭐78k | 开源自主 AI 编程 Agent（原 OpenDevin），可写代码/跑终端/提 PR，MIT 开源 |
 
 ### 2026 AI 编程趋势
 
@@ -463,6 +498,7 @@
 | 【李宏毅】2025 生成式 AI 导论 | 42 集全，涵盖 LLM、AI Agent、神经网络等 | [B站](https://www.bilibili.com/video/BV1mXpuz7E9v/)
 | 【吴恩达】LLM 大模型教程（2025） | 大模型入门到进阶，附课件代码 | [B站](https://www.bilibili.com/video/BV1sMEyzhEM3/)
 | 【吴恩达】Agentic AI 智能体课程（2026） | 最新 Agent 开发课程，含 A2A 协议实践 | [DeepLearning.AI](https://www.deeplearning.ai/courses/a2a-the-agent2agent-protocol)
+| 【吴恩达】Agent Skills with Anthropic（2026） | Agent 技能开发课程，含课件代码 | [B站](https://www.bilibili.com/video/BV1qv6eBZErD/)
 | 【清华 NLP】刘知远大模型公开课 | 20 小时从入门到精通，含交叉领域应用 | [B站](https://www.bilibili.com/video/BV1UG411p7zv/)
 | 【黑马程序员】大模型 RAG 与 Agent 实战 | 基于 LangChain 从提示词到 RAG+Agent 项目实战 | [B站](https://www.bilibili.com/video/BV1yjz5BLEoY/)
 | Stanford CS336 | 2026 春季，从零构建语言模型，注重动手实践 | [课程主页](https://cs336.stanford.edu/)
@@ -474,6 +510,9 @@
 | 吴恩达大模型课程中文版（llm-cookbook） | ⭐24.2k，11 门课程翻译 + 可运行代码 | [GitHub](https://github.com/datawhalechina/llm-cookbook)
 | 动手学大模型应用开发（llm-universe） | 面向小白的 LLM 应用开发教程 | [GitHub](https://github.com/datawhalechina/llm-universe)
 | 大模型基础（so-large-lm） | 从数据准备到训练策略的全链路知识 | [GitHub](https://github.com/datawhalechina/so-large-lm)
+| 大模型技术实战（llm-action） | ⭐18.1k，大模型工程化与应用落地实战经验，含量化/剪枝/分布式训练 | [GitHub](https://github.com/liguodongiot/llm-action)
+| 大模型白盒子构建指南（tiny-universe） | 手搓 Tiny-LLM Universe，理解 LLM 原理 | [GitHub](https://github.com/datawhalechina/tiny-universe)
+| AI 新知：2026 LLM 系列教程 | 面向 2026 年的 AI、大模型、智能体、LLMOps 系列 | [知乎专栏](https://zhuanlan.zhihu.com/p/1993642974563812198)
 | InfiniTensor 2025 夏季大模型训练营 | 免费线上课程，涵盖 AI 编译器、推理系统、并行计算 | [训练营主页](https://opencamp.ai/InfiniTensor/camp/2025summer)
 
 ---
@@ -522,12 +561,22 @@
 - [ALERT 零样本越狱检测框架](https://zhuanlan.zhihu.com/p/1992965841180959576)：从层级/模块级/token 级三粒度实现早期无侵入检测
 - [自动化红队测试基准](https://adg.csdn.net/6952477f5b9f5f31781b56bd.html)：Garak/AdvGLUE 等主流 LLM 安全评估框架解析
 
+### 2026 前沿安全研究
+
+- [安全向量提取框架 GOSV（2026.2）](https://zhuanlan.zhihu.com/p/2001287271400362256)：全局优化识别安全关键注意力头，约 30% 头被重贴时安全性完全崩溃
+- [跨模态越狱迁移（2026.3）](https://zhuanlan.zhihu.com/p/2013670172221792368)：发现"对齐诅咒"——强对齐会将文本漏洞传播到音频模态
+- [GT-HARMBENCH 多智能体安全基准（2026.3）](https://zhuanlan.zhihu.com/p/2013709848571815059)：2,009 个高风险场景，15 个前沿模型仅 62% 选择有益行动
+- [CC-Delta 稀疏自编码器防御（2026.3）](https://zhuanlan.zhihu.com/p/2013709848571815059)：比较有无越狱上下文下的 token 表示差异，识别越狱特征
+
 ---
 
 ## 综合资源索引
 
 - [Awesome-Chinese-LLM](https://github.com/HqWu-HITCS/Awesome-Chinese-LLM)：⭐22.6k，最全面的中文 LLM 资源索引，涵盖模型、数据集、微调框架、应用等
 - [awesome-chatgpt-zh](https://github.com/yzfly/awesome-chatgpt-zh)：⭐11.5k，ChatGPT 中文指南，含工具、应用、开发资源
+- [大模型技术实战（llm-action）](https://github.com/liguodongiot/llm-action)：⭐18.1k，大模型工程化实战，涵盖训练/微调/量化/推理/部署全链路
+- [LLM 全栈优质资源汇总（llm-resource）](https://github.com/liguodongiot/llm-resource)：大模型全栈学习资料索引
+- [Awesome-LLM-Resources](https://github.com/WangRongsheng/awesome-LLM-resources)：全球 LLM 资源总结，含多模态/Agent/编程/数据处理/MCP 等
 - [中国大模型列表（awesome-LLMs-In-China）](https://github.com/wgwang/awesome-LLMs-In-China)：国产大模型全景图
 - [通往 AGI 之路](https://wiki.waytoagi.com/)：中文 AI 知识社区，含 LLM 开源模型及数据集集合
 
