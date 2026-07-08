@@ -1,0 +1,61 @@
+name: Weekly Chinese LLM Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub cron is UTC. Run at 16:00 and 17:00 UTC, then gate by local time
+    # so the job effectively runs at Monday 09:00 America/Los_Angeles across DST.
+    - cron: "0 16,17 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-chatgpt-chinese-update
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate to Monday 09:00 local time
+        if: github.event_name == 'schedule'
+        run: |
+          local_time="$(TZ=America/Los_Angeles date +%u-%H)"
+          if [ "$local_time" != "1-09" ]; then
+            echo "Skip because local time is $local_time, not Monday 09:00."
+            exit 0
+          fi
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate weekly update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          RUN_TZ: America/Los_Angeles
+          LOOKBACK_DAYS: "14"
+          TOP_K: "12"
+        run: python scripts/weekly_chatgpt_chinese_update.py
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md weekly/
+          if git diff --cached --quiet; then
+            echo "No weekly resource changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: weekly Chinese LLM resource update"
+          git push
