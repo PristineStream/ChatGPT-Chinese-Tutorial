@@ -6,7 +6,27 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 6 月 29 日
+> 最近更新：2026 年 7 月 13 日
+
+---
+
+<!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
+## 每周精选更新
+
+> 自动生成时间：2026-07-13。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+
+| 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
+| ---- | ---- | ---- | ---- | ---- |
+| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-07-13） |
+| 2 | AI Agent / 工具调用 | [ChaoYue0307/awesome-loop-engineering](https://github.com/ChaoYue0307/awesome-loop-engineering) | GitHub | 英文资源，建议关注：Loop Engineering: a curated field guide to designing recurring AI agent and coding-agent loops — patterns, loop contracts, runnable examples, and resources above prompt, context, a...（⭐ 22；更新 2026-07-13） |
+| 3 | RAG / AI 搜索 | [AJiang4015/RAG-demo](https://github.com/AJiang4015/RAG-demo) | GitHub | 英文资源，建议关注：RAG (Retrieval-Augmented Generation) tutorial code - document loading, text splitting, embedding, FAISS index, advanced retrieval strategies (HyDE, Multi-Query, Hybrid Search, Rera...（⭐ 0；更新 2026-07-08） |
+| 4 | RAG / AI 搜索 | [anisadwisww/Advanced-RAG-Pipeline-with-RAGAS-Evaluation-for-UMRI-Informatics-Thesis-Guidebook](https://github.com/anisadwisww/Advanced-RAG-Pipeline-with-RAGAS-Evaluation-for-UMRI-Informatics-Thesis-Guidebook) | GitHub | 英文资源，建议关注：An advanced RAG pipeline to query and evaluate the UMRI Informatics Thesis Guidebook. Powered by LlamaParse, Qdrant, NVIDIA NIM, and cross-encoder re-ranking. Features Prompt Engin...（⭐ 1；更新 2026-07-05） |
+| 5 | AI Agent / 工具调用 | [Sharvantg/understanding-Hermes](https://github.com/Sharvantg/understanding-Hermes) | GitHub | 英文资源，建议关注：A study guide reverse-engineering the Hermes agent harness — prompt caching, tool/toolset registry, the Footprint Ladder, context management, and the Honcho memory/dialectic layer.（⭐ 0；更新 2026-07-02） |
+| 6 | AI Agent / 工具调用 | [jxf20250119/QWQ-coding-agent-powered-by-Pi](https://github.com/jxf20250119/QWQ-coding-agent-powered-by-Pi) | GitHub | 英文资源，建议关注：An open-source desktop AI coding agent (Electron + Pi) that combines deep single-agent reasoning with multi-agent parallel orchestration, a self-improving autoresearch loop, and ti...（⭐ 0；更新 2026-07-13） |
+| 7 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
+| 8 | Prompt / 上下文工程 | [CodeByKhaleel/ContextCraft](https://github.com/CodeByKhaleel/ContextCraft) | GitHub | 英文资源，建议关注：The Developer’s Guide to AI Systems, Prompt Engineering, and Context Engineering.（⭐ 2；更新 2026-07-06） |
+
+<!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
 ---
 
