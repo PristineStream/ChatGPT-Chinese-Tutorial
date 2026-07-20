@@ -6,25 +6,25 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 7 月 13 日
+> 最近更新：2026 年 7 月 20 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-07-13。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-07-20。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-07-13） |
-| 2 | AI Agent / 工具调用 | [ChaoYue0307/awesome-loop-engineering](https://github.com/ChaoYue0307/awesome-loop-engineering) | GitHub | 英文资源，建议关注：Loop Engineering: a curated field guide to designing recurring AI agent and coding-agent loops — patterns, loop contracts, runnable examples, and resources above prompt, context, a...（⭐ 22；更新 2026-07-13） |
-| 3 | RAG / AI 搜索 | [AJiang4015/RAG-demo](https://github.com/AJiang4015/RAG-demo) | GitHub | 英文资源，建议关注：RAG (Retrieval-Augmented Generation) tutorial code - document loading, text splitting, embedding, FAISS index, advanced retrieval strategies (HyDE, Multi-Query, Hybrid Search, Rera...（⭐ 0；更新 2026-07-08） |
-| 4 | RAG / AI 搜索 | [anisadwisww/Advanced-RAG-Pipeline-with-RAGAS-Evaluation-for-UMRI-Informatics-Thesis-Guidebook](https://github.com/anisadwisww/Advanced-RAG-Pipeline-with-RAGAS-Evaluation-for-UMRI-Informatics-Thesis-Guidebook) | GitHub | 英文资源，建议关注：An advanced RAG pipeline to query and evaluate the UMRI Informatics Thesis Guidebook. Powered by LlamaParse, Qdrant, NVIDIA NIM, and cross-encoder re-ranking. Features Prompt Engin...（⭐ 1；更新 2026-07-05） |
-| 5 | AI Agent / 工具调用 | [Sharvantg/understanding-Hermes](https://github.com/Sharvantg/understanding-Hermes) | GitHub | 英文资源，建议关注：A study guide reverse-engineering the Hermes agent harness — prompt caching, tool/toolset registry, the Footprint Ladder, context management, and the Honcho memory/dialectic layer.（⭐ 0；更新 2026-07-02） |
+| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-07-19） |
+| 2 | RAG / AI 搜索 | [AJiang4015/RAG-demo](https://github.com/AJiang4015/RAG-demo) | GitHub | 英文资源，建议关注：RAG (Retrieval-Augmented Generation) tutorial code - document loading, text splitting, embedding, FAISS index, advanced retrieval strategies (HyDE, Multi-Query, Hybrid Search, Rera...（⭐ 0；更新 2026-07-08） |
+| 3 | AI Agent / 工具调用 | [Rahulchaube1/Rahul-Chaube-Skills](https://github.com/Rahulchaube1/Rahul-Chaube-Skills) | GitHub | 英文资源，建议关注：The most comprehensive open-source AI skills library for LLMs, AI agents, prompt engineering, deep research, and production AI systems.（⭐ 3；更新 2026-07-19） |
+| 4 | AI Agent / 工具调用 | [LLM-Powered Agentic AI for 5G/6G Networks: A Tutorial and Survey on Architectures, Protocols, and Standardization](http://arxiv.org/abs/2607.16066v1) | arXiv | 英文资源，建议关注：Agentic Artificial Intelligence (AI), enabled by Large Language Models, marks a shift from rule-based automation toward autonomous, goal-driven control of Next-Generation Networks ...（paper；更新 2026-07-17） |
+| 5 | AI Agent / 工具调用 | [BayesPO: Bayesian Prompt Optimization via Parallel-Tempered Gradient-Guided Discrete MCMC](http://arxiv.org/abs/2607.16001v1) | arXiv | 英文资源，建议关注：Prompt optimization adapts large language models (LLMs) without updating model parameters, but many automatic prompt optimizers remain heuristic search procedures over candidate in...（paper；更新 2026-07-17） |
 | 6 | AI Agent / 工具调用 | [jxf20250119/QWQ-coding-agent-powered-by-Pi](https://github.com/jxf20250119/QWQ-coding-agent-powered-by-Pi) | GitHub | 英文资源，建议关注：An open-source desktop AI coding agent (Electron + Pi) that combines deep single-agent reasoning with multi-agent parallel orchestration, a self-improving autoresearch loop, and ti...（⭐ 0；更新 2026-07-13） |
 | 7 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 8 | Prompt / 上下文工程 | [CodeByKhaleel/ContextCraft](https://github.com/CodeByKhaleel/ContextCraft) | GitHub | 英文资源，建议关注：The Developer’s Guide to AI Systems, Prompt Engineering, and Context Engineering.（⭐ 2；更新 2026-07-06） |
+| 8 | AI Agent / 工具调用 | [When Do Multi-Agent Systems Help? An Information Bottleneck Perspective](http://arxiv.org/abs/2607.16133v1) | arXiv | 英文资源，建议关注：LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with perform...（paper；更新 2026-07-17） |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
