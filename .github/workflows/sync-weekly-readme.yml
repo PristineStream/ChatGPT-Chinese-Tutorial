@@ -1,0 +1,43 @@
+name: Sync Weekly Report to README
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "weekly/20??-??-??.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-weekly-readme
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Sync latest weekly report
+        run: python scripts/sync_latest_weekly_to_readme.py
+
+      - name: Commit README update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "README is already up to date."
+            exit 0
+          fi
+          git commit -m "docs: sync latest weekly update to README"
+          git push
