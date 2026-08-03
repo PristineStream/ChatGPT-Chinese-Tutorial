@@ -35,6 +35,7 @@ def normalize_file(path: Path) -> str:
 
 
 def main() -> int:
+    # Strict date filtering remains here; the workflow uses a broader valid glob.
     reports = sorted(WEEKLY_DIR.glob("20??-??-??.md"))
     if not reports:
         print("No weekly reports found.")
