@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "weekly/20??-??-??.md"
+      - "weekly/*.md"
       - "scripts/sync_latest_weekly_to_readme.py"
   workflow_dispatch:
 
