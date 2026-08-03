@@ -6,25 +6,25 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 7 月 27 日
+> 最近更新：2026 年 8 月 3 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-07-27。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-08-03。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-07-27） |
-| 2 | AI Agent / 工具调用 | [PapaDanielVi/claude-code-llm-wiki](https://github.com/PapaDanielVi/claude-code-llm-wiki) | GitHub | 英文资源，建议关注：Knowledge base for Claude Code skills, context engineering, prompting, and agentic workflows — patterns, best practices, and practical guides for building effective AI systems（⭐ 2；更新 2026-07-24） |
-| 3 | AI Agent / 工具调用 | [Rahulchaube1/Rahul-Chaube-Skills](https://github.com/Rahulchaube1/Rahul-Chaube-Skills) | GitHub | 英文资源，建议关注：The most comprehensive open-source AI skills library for LLMs, AI agents, prompt engineering, deep research, and production AI systems.（⭐ 2；更新 2026-07-26） |
-| 4 | AI Agent / 工具调用 | [SMEFT-Pheno-Agent: a natural-language-driven AI agent for machine-learning-assisted Standard Model Effective Field Theory phenomenology](http://arxiv.org/abs/2607.22331v1) | arXiv | 英文资源，建议关注：We present SMEFT-Pheno-Agent, a Python workflow guided by a natural-language AI agent to perform machine-learning-assisted Standard Model Effective Field Theory (SMEFT) phenomenolo...（paper；更新 2026-07-24） |
-| 5 | Prompt / 上下文工程 | [qwerfunch/ai-engineering-layers](https://github.com/qwerfunch/ai-engineering-layers) | GitHub | 英文资源，建议关注：A field guide to the five engineering layers of AI-assisted development: prompt → context → harness → loop → graph. English & Korean.（⭐ 1；更新 2026-07-27） |
-| 6 | AI Agent / 工具调用 | [AgentTest111/MyAwesomeModel-TestRepo](https://huggingface.co/AgentTest111/MyAwesomeModel-TestRepo) | Hugging Face | 近期更新模型，tags: transformers, pytorch, bert, feature-extraction, license:mit, endpoints_compatible, region:us（likes 0；更新 2026-07-27） |
-| 7 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 8 | AI Agent / 工具调用 | [jxf20250119/QWQ-coding-agent-powered-by-Pi](https://github.com/jxf20250119/QWQ-coding-agent-powered-by-Pi) | GitHub | 英文资源，建议关注：An open-source desktop AI coding agent (Electron + Pi) that combines deep single-agent reasoning with multi-agent parallel orchestration, a self-improving autoresearch loop, and ti...（⭐ 0；更新 2026-07-13） |
+| 1 | MCP / Agent 基础设施 | [MCP 2026-07-28 Specification](https://modelcontextprotocol.io/specification/2026-07-28) | MCP 官方规范 | 新版将协议核心改为无状态设计，并引入 Extensions、Tasks、MCP Apps、授权增强和正式弃用机制。对生产 MCP Server，最值得检查的是会话状态依赖、OAuth/OIDC、工具 Schema 与长任务兼容性。 |
+| 2 | 多模态 / Physical AI | [Introducing Cosmos 3 Edge](https://huggingface.co/blog/nvidia/cosmos3edge) | NVIDIA / Hugging Face | 4B 开放世界模型把视觉、语言、视频、音频与动作统一到共享表示，可作为 VLM 或机器人策略模型运行在边缘设备。文章同时给出后训练与蒸馏实践，适合学习“世界模型 + 动作模型 + 端侧部署”的完整链路。 |
+| 3 | Agent Memory / 评测 | [Evaluating Agent Memory Honestly](https://huggingface.co/blog/mjfk/evaluating-agent-memory-honestly) | Hugging Face 社区 | 强调 Agent Memory 不是简单向量库，而是包含抽取、冲突消解、有效期、遗忘和时间推理的持续维护过程。对 LoCoMo、LongMemEval、MemoryAgentBench 的局限分析，以及 temporal correctness 测试清单，具有直接工程价值。 |
+| 4 | 开源模型 / MoE | [Kimi K3 Model Overview](https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei) | Hugging Face 社区 | 从架构、MoE 路由、混合线性注意力、MXFP4/MXFP8 量化和部署成本角度拆解超大规模开放权重模型。值得重点学习量化感知训练如何从 SFT 阶段介入，以及超大 MoE 对推理框架和 Agent Harness 的要求。 |
+| 5 | MCP / 系统设计 | [MCP Server Architecture Patterns for LLM-Integrated Applications](https://arxiv.org/abs/2606.30317) | arXiv | 总结 Resource Gateway、Tool Orchestrator、Stateful Session Server、Proxy Aggregator、Domain-Specific Adapter 五类 MCP Server 模式，并讨论认证、版本和可观测性。论文还观察到工具数量增加会显著降低工具选择准确率，说明 Tool Retrieval 与 Schema 裁剪应成为标准组件。 |
+| 6 | 模型评测 / Benchmark | [The influx of specialist models on the Open SLM Leaderboard](https://huggingface.co/blog/Banaxi-Tech/ssep) | Hugging Face 社区 | 通过“小模型针对单一基准训练后冲榜”的案例，展示平均分排行榜如何被 specialist model 利用。启示是模型评测必须看分项能力、数据污染、能力覆盖和异常分布，而不能只看单一综合排名。 |
+| 7 | 后训练 / 多 Agent | [Post-Training Recipe, More Than Model Family, Shapes Multi-Agent LLM Conversational Behavior](https://arxiv.org/abs/2606.20632) | arXiv | 大规模交互实验表明，多 Agent 系统中的行为差异不应只按模型家族判断；同一基座经过不同后训练后，也可能形成显著不同的对话行为。对构建 Judge Panel、多模型辩论和 Agent 路由有直接启示。 |
+| 8 | 后训练 / 方法论 | [Large Language Model Post-Training: A Unified View of Off-Policy and On-Policy Learning](https://arxiv.org/abs/2604.07941) | arXiv | 用 off-policy / on-policy、支持域扩展、策略重塑和行为固化统一理解 SFT、偏好优化、RL 与蒸馏。相比按算法名称罗列，更适合用来设计多阶段后训练流水线和定位训练瓶颈。 |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
