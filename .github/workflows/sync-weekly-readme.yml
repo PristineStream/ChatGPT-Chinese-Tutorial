@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "weekly/20??-??-??.md"
+      - "scripts/sync_latest_weekly_to_readme.py"
   workflow_dispatch:
 
 permissions:
@@ -32,13 +33,13 @@ jobs:
       - name: Sync latest weekly report
         run: python scripts/sync_latest_weekly_to_readme.py
 
-      - name: Commit README update
+      - name: Commit normalized files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md weekly/
           if git diff --cached --quiet; then
-            echo "README is already up to date."
+            echo "README and weekly reports are already up to date."
             exit 0
           fi
           git commit -m "docs: sync latest weekly update to README"
