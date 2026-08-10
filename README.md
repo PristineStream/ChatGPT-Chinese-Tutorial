@@ -6,25 +6,25 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 8 月 3 日
+> 最近更新：2026 年 8 月 10 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-08-03。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-08-10。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-07-27） |
-| 2 | AI Agent / 工具调用 | [PapaDanielVi/claude-code-llm-wiki](https://github.com/PapaDanielVi/claude-code-llm-wiki) | GitHub | 英文资源，建议关注：Knowledge base for Claude Code skills, context engineering, prompting, and agentic workflows — patterns, best practices, and practical guides for building effective AI systems（⭐ 2；更新 2026-07-24） |
-| 3 | AI Agent / 工具调用 | [Multi-Agent-Audit/high-stakes-reasoning](https://github.com/Multi-Agent-Audit/high-stakes-reasoning) | GitHub | 英文资源，建议关注：Official code for a multi-agent audit framework for reliable and interpretable high-stakes LLM reasoning, evaluated on PHQ-8 depression assessment with DAIC-WOZ using locally deplo...（⭐ 1；更新 2026-08-02） |
-| 4 | 多模态 | [LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V6-GGUF](https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V6-GGUF) | Hugging Face | 近期更新模型，tags: hermes, gguf, uncensored, qwen3.6, moe, vision, multimodal, genesis（likes 338；更新 2026-08-03） |
-| 5 | Prompt / 上下文工程 | [chbayah-sudo/ai-systems-engineering-guide](https://github.com/chbayah-sudo/ai-systems-engineering-guide) | GitHub | 英文资源，建议关注：Prompt, context, harness, loop, and graph engineering: a notebook guide to designing reliable AI systems（⭐ 0；更新 2026-08-03） |
-| 6 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 7 | Prompt / 上下文工程 | [qwerfunch/ai-engineering-layers](https://github.com/qwerfunch/ai-engineering-layers) | GitHub | 英文资源，建议关注：A field guide to the five engineering layers of AI-assisted development: prompt → context → harness → loop → graph. English & Korean.（⭐ 1；更新 2026-07-28） |
-| 8 | AI Agent / 工具调用 | [TokTier: Exact Stateful Tokenization for Agentic LLM Serving](http://arxiv.org/abs/2607.29678v1) | arXiv | 英文资源，建议关注：LLM serving systems cache prompt KV state, yet most front ends still re-tokenize the full request text on every call. The cost lands on coding agents, which resubmit a long transcr...（paper；更新 2026-07-31） |
+| 1 | Deep Research / Reranker | [Training Documents Reranker with Search Rubrics for Deep Research Agent](https://arxiv.org/abs/2608.03527) | arXiv | 2026-08-04 发布。把“文档相关性”升级为面向复杂研究任务的集合级 Rubric：不仅要相关，还要覆盖、多样、简洁、权威。通过 Rubric-guided SFT + RL 训练 RubricRanker，在 4 个 Deep Research benchmark 上优于最强基线 2.6 分，并迁移到 5 个 RAG benchmark。最值得学习的是：Deep Research 的 reranker 目标应该从 pointwise relevance 转向 set utility。 |
+| 2 | RAG / 参数化检索 | [RING: Retrieval-Internalized Generation for Continual Large-Scale Knowledge Injection](https://arxiv.org/abs/2608.01630) | arXiv | 2026-08-03 发布。提出 Mixture-of-Memory Experts，把外部知识注入模型内部，并用 SFT 教会 search-then-answer、再用分层奖励 RL 学习内部检索策略，目标是减少在线 RAG 的检索延迟和工程复杂度。值得关注“外部 RAG → 可学习参数化 memory/search”的路线。 |
+| 3 | RAG / 工程评测 | [SciRet: A Compute-Aware Empirical Study of Retrieval and Reranking for Scientific RAG](https://arxiv.org/abs/2608.03860) | arXiv | 2026-08-04 发布。系统比较 BM25、BGE-M3、RRF、Cross-Encoder 在科学文献 RAG 中的质量与计算成本。一个重要结果是：领域不匹配的 MS MARCO Cross-Encoder 可能反而降低效果，说明 reranker 并不是越强越好，domain alignment 比模型规模更重要。 |
+| 4 | MCP / Agent 基础设施 | [The 2026-07-28 MCP Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/) | MCP 官方 | 最新正式规范把 MCP 核心改成无状态 request/response，移除 initialize/session，加入 Multi Round-Trip Requests、header routing、可缓存 list、Tasks/Extensions 与授权强化。对生产 ToolHub/MCP Server，最值得实践的是无状态化、tool catalog cache 和 gateway 层路由/鉴权。 |
+| 5 | Agentic Search / Retriever 训练 | [Agentic-R: Learning to Retrieve for Agentic Search](https://aclanthology.org/2026.findings-acl.785/) | ACL 2026 Findings | 不再只用 query-passage relevance 训练 retriever，而是同时引入最终答案正确性，并让 Agent 与 Retriever 迭代双向优化。它说明 Agentic Search 的 retriever 应该针对 trajectory 中真实产生的 query 持续训练，而不是沿用静态 RAG retriever。 |
+| 6 | RAG / RL 后训练 | [Optimizing RAG Rerankers with LLM Feedback via Reinforcement Learning](https://aclanthology.org/2026.acl-long.1406/) | ACL 2026 | 提出 RRPO，把 reranking 看作 sequential decision-making，用下游 LLM generation quality 作为反馈训练 reranker，弱化静态人工 relevance label。核心启示是：排序目标应该直接对齐最终生成质量，而不是只优化 NDCG/MRR。 |
+| 7 | 多模态 / 后训练 | [A Survey on Post-Training of Multimodal Large Language Models](https://www.preprints.org/manuscript/202607.1494) | Preprints / 项目整理 | 近期系统总结多模态后训练，将方法划分为 instruction following、preference calibration、reasoning enhancement、domain adaptation、scalable training 五类，并覆盖多模态 RLHF/RLAIF/DPO、视觉推理、on-policy distillation 等方向。适合作为 MLLM 后训练路线图。 |
+| 8 | 中文 LLM / 多模态 Agent | [Qwen3.7 Flash](https://docs.qwencloud.com/changelog/models) | Qwen 官方 | 2026-07-25 发布的原生视觉语言 Flash 系列，重点升级 multimodal foundation、真实世界感知、空间智能，以及 Search Agent / CI Agent 的端到端执行稳定性。相比单纯 benchmark，更值得关注其“多模态感知 + Agent 执行”一体化趋势。 |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
