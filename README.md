@@ -6,25 +6,25 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 8 月 17 日
+> 最近更新：2026 年 8 月 24 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-08-17。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-08-24。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-08-16） |
+| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-08-24） |
 | 2 | RAG / AI 搜索 | [ankit-gangrade-lowcademy/AzureAISearchTutorial-Custom](https://github.com/ankit-gangrade-lowcademy/AzureAISearchTutorial-Custom) | GitHub | 英文资源，建议关注：Azure AI Search Tutorial Custom is a learning-focused project for developers to learn Azure AI Search and Retrieval-Augmented Generation (RAG). It guides you through configuring yo...（⭐ 0；更新 2026-08-14） |
-| 3 | AI Agent / 工具调用 | [ATLAS: Discovering Agent Strategies through LLM-Guided Abstraction and Automata Learning](http://arxiv.org/abs/2608.14352v1) | arXiv | 英文资源，建议关注：Large Language Model (LLM)-based agents are increasingly used for complex tasks such as software testing and cybersecurity assessment. While these agents demonstrate impressive cap...（paper；更新 2026-08-14） |
-| 4 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 5 | RAG / AI 搜索 | [antonio-gaskin/rag-opensearch](https://github.com/antonio-gaskin/rag-opensearch) | GitHub | 英文资源，建议关注：Semantic Search Engine for Retrieval-Augmented Generation (RAG) using AWS OpenSearch and Bedrock Titan embeddings.（⭐ 9；更新 2026-08-06） |
-| 6 | Prompt / 上下文工程 | [chbayah-sudo/ai-systems-engineering-guide](https://github.com/chbayah-sudo/ai-systems-engineering-guide) | GitHub | 英文资源，建议关注：Prompt, context, harness, loop, and graph engineering: a notebook guide to designing reliable AI systems（⭐ 0；更新 2026-08-08） |
-| 7 | AI Agent / 工具调用 | [Validating LLM-Modernized Scientific Software Through Differential Fault Injection](http://arxiv.org/abs/2608.14527v1) | arXiv | 英文资源，建议关注：Large language model (LLM) agents are increasingly used to modernize the legacy Fortran underlying production scientific software, but validation of these transformations emphasize...（paper；更新 2026-08-14） |
-| 8 | AI Agent / 工具调用 | [SheetCompass: Hierarchical Relation Graphs for Agentic Spreadsheet Reasoning](http://arxiv.org/abs/2608.14452v1) | arXiv | 英文资源，建议关注：Spreadsheets are widely used to organize, analyze, and manipulate semi-structured data, yet automated spreadsheet reasoning remains challenging for large language models (LLMs). Re...（paper；更新 2026-08-14） |
+| 3 | Prompt / 上下文工程 | [OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs](http://arxiv.org/abs/2608.21360v1) | arXiv | 英文资源，建议关注：Recent omni-modal large language models (Omni-LLMs) show great potential as real-time video assistants, which continuously perceive environments and guide users to achieve specific...（paper；更新 2026-08-21） |
+| 4 | 后训练 / 强化学习 | [ConceptTS: LLM-Guided Concept Bottlenecks for Interpretable Multivariate Time-Series Forecasting](http://arxiv.org/abs/2608.21277v1) | arXiv | 英文资源，建议关注：State-of-the-art multivariate time-series forecasters can model complex temporal and cross-variable dependencies, yet their opaque representations provide limited insight into why ...（paper；更新 2026-08-21） |
+| 5 | 开源模型 / 模型平台 | [Jeratt950/llm-course-hw1](https://huggingface.co/Jeratt950/llm-course-hw1) | Hugging Face | 近期更新模型，tags: safetensors, model_hub_mixin, pytorch_model_hub_mixin, region:us（likes 0；更新 2026-08-24） |
+| 6 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
+| 7 | AI Agent / 工具调用 | [Beyond Fault Localization: A Trajectory-Level Study of LLM Agents for Microservice Root Cause Analysis](http://arxiv.org/abs/2608.21310v1) | arXiv | 英文资源，建议关注：Existing evaluations of automated root cause analysis (RCA) for microservices assess diagnostic performance mainly by endpoint correctness: whether a method localizes the responsib...（paper；更新 2026-08-21） |
+| 8 | AI Agent / 工具调用 | [Personalized Privacy Control in LLMs via Attention Head Intervention](http://arxiv.org/abs/2608.21209v1) | arXiv | 英文资源，建议关注：The rise of agentic AI enables LLMs to access diverse user data, raising critical privacy concerns. Prior work on contextual privacy studies whether LLMs regulate information discl...（paper；更新 2026-08-21） |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
