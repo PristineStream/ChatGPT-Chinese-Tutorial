@@ -6,25 +6,25 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 8 月 31 日
+> 最近更新：2026 年 9 月 7 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-08-31。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-09-07。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-08-31） |
-| 2 | AI Agent / 工具调用 | [nileshmodak/ai-tutorial](https://github.com/nileshmodak/ai-tutorial) | GitHub | 英文资源，建议关注：A collection of hands-on AI tutorials and practical examples covering RAG, AI Agents, LangGraph, MCP, LLM integrations, vector databases, tool calling, memory, and agentic workflow...（⭐ 0；更新 2026-08-29） |
-| 3 | AI Agent / 工具调用 | [Acquire, Repair, Preserve: A Diagnosis-Guided Post-Training Recipe for Small-Model Dialogue Game Agents](http://arxiv.org/abs/2608.28458v1) | arXiv | 英文资源，建议关注：Interactive dialogue games test a capability that static benchmarks largely leave implicit: a model must carry state across turns, interpret feedback, and choose valid actions unde...（paper；更新 2026-08-28） |
-| 4 | AI Agent / 工具调用 | [sam-guided-vlas/train_1_2_pile__point__overlay_a75__sim__agentview_camera__static__pi05__seed_0](https://huggingface.co/sam-guided-vlas/train_1_2_pile__point__overlay_a75__sim__agentview_camera__static__pi05__seed_0) | Hugging Face | 近期更新模型，tags: lerobot, safetensors, pi05, robotics, dataset:sam-guided-vlas/train_1_2_pile__point__overlay_a75__sim__agentview_camera__static, base_model:lerobot/pi05_base, base_model:finetune:lerobot/pi05_base, license:apache-2.0（likes 0；更新 2026-08-31） |
-| 5 | AI Agent / 工具调用 | [sam-guided-vlas/train_1_2_pile__point__overlay_a75__sim__agentview_camera__live__pi05__seed_0](https://huggingface.co/sam-guided-vlas/train_1_2_pile__point__overlay_a75__sim__agentview_camera__live__pi05__seed_0) | Hugging Face | 近期更新模型，tags: lerobot, safetensors, pi05, robotics, dataset:sam-guided-vlas/train_1_2_pile__point__overlay_a75__sim__agentview_camera__live, base_model:lerobot/pi05_base, base_model:finetune:lerobot/pi05_base, license:apache-2.0（likes 0；更新 2026-08-31） |
-| 6 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 7 | AI Agent / 工具调用 | [peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF](https://huggingface.co/peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF) | Hugging Face | 近期更新模型，tags: gguf, llama.cpp, qwen35moe, moe, imatrix, unsloth-dynamic, agentic-coding, token-efficient（likes 159；更新 2026-08-30） |
-| 8 | AI Agent / 工具调用 | [xTRUCE: A Provably Safe Arbiter for Multi-xApp Conflict Mitigation in Agentic O-RAN](http://arxiv.org/abs/2608.28532v1) | arXiv | 英文资源，建议关注：The open radio access network (O-RAN) is evolving toward agentic operation, where large language model (LLM)-driven xApps/rApps generate control proposals under operator intents. H...（paper；更新 2026-08-28） |
+| 1 | Agent / 轨迹复用 | [TRIAGE: Three-level Routing and Intelligent Agent Guidance for Efficient Execution](https://arxiv.org/abs/2609.01428) | arXiv | 把历史 Agent Trajectory 抽象成可复用 Skill：相同请求直接复用、相似请求做确定性参数替换、只有新请求才进入完整 ReAct。论文在安全监控和 ToolBench 上报告 62.3% / 76.3% 的 token 降幅，值得用于设计“Memory → Skill → Policy”演化链路。 |
+| 2 | MCP / Agent Eval | [Agent Seer: Synthesizing Scenarios from Specification Understanding](https://machinelearning.apple.com/research/agent-seer-synthesizing-scenarios) | Apple Machine Learning Research | 仅从 MCP 工具规范的名称、描述和参数 Schema 出发，就自动生成多轮工具调用评测场景，无需真实工具执行和人工样例。最重要的发现是参数 Schema 复杂度比工具数量更能解释生成质量差异，且 argument value accuracy 是主要失败点。 |
+| 3 | 后训练 / RL | [GCPO: Diagnosing and Constraining Subspace Geometry in Rollout RL for LLMs](https://arxiv.org/abs/2608.11674) | arXiv | 针对 GRPO 类 on-policy RL 的训练不稳定、跨任务能力退化和回复长度膨胀，提出 Principal-Subspace Overlap 诊断指标与几何约束更新。论文在数学、代码和工具使用任务上对 GRPO/DAPO/GSPO 均有提升，适合研究“RL 稳定性 + 能力保持”。 |
+| 4 | 多模态 Agent / MCP | [Screenshots or Tools? Eliciting Tool Use and Managing Multimodal Context in Hybrid GUI-MCP Computer-Use Agents](https://arxiv.org/abs/2608.03327) | arXiv | 同一组 MCP 工具对 reasoning model 有正收益、对 non-reasoning model 反而可能有负收益，说明“工具可用”不等于“工具会被正确采用”。论文还发现成功工具调用后可显著压缩截图上下文，重新训练后在约 53% 输入成本下超过未压缩基线。 |
+| 5 | RAG / 多 Agent | [Multi-agent retrieval validation and knowledge reasoning for enhanced retrieval augmented generation](https://www.nature.com/articles/s41598-026-69002-7) | Scientific Reports | 2026-09-01 发布的同行评审工作，将检索验证和知识推理拆给多个 Agent 协同完成，体现 RAG 从单链路 retrieval→generation 向“检索—验证—推理—生成”多角色协作演进。适合参考其模块划分和端到端评测思路。 |
+| 6 | MCP / 安全 | [SandScope: a Behavioral Audit Layer for MCP Tools in LLM Agent Supply Chains](https://eprints.gla.ac.uk/393613/) | University of Glasgow / SCORED '26 | 把 MCP 工具视为 Agent 供应链中的第三方软件包，通过受控执行、MCP-aware sink 提取和 runtime witness 检查工具行为。它提醒生产 Agent 的安全边界不能只靠 Schema 审查，而应加入“动态行为审计 + 权限最小化”。 |
+| 7 | MCP / 标准路线图 | [The New MCP Roadmap](https://blog.modelcontextprotocol.io/posts/mcp-roadmap/) | Model Context Protocol 官方博客 | 2026-08-22 官方路线图将下一阶段重点放在 Agentic messaging primitives、HTTP-native transport、Agent identity / enterprise security、primitive 改进和 SDK DX。对 ToolHub/MCP 平台而言，身份、路由、安全和跨 Agent 通信会成为下一阶段基础设施主线。 |
+| 8 | ChatGPT / Agent 产品 | [ChatGPT Release Notes — September 3, 2026](https://help.openai.com/en/articles/6825453) | OpenAI | 9 月 3 日发布说明强调新一代模型在 coding、research、computer use 和复杂多步工作上的增强，同时继续把文档、表格、演示文稿等制品创建纳入 Agent 工作流。值得观察“模型能力 + 工具 + artifact”逐渐融合为统一执行界面的趋势。 |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
