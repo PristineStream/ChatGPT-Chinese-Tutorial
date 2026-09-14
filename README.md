@@ -6,25 +6,25 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 9 月 7 日
+> 最近更新：2026 年 9 月 14 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-09-07。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-09-14。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-09-06） |
-| 2 | AI Agent / 工具调用 | [nileshmodak/ai-tutorial](https://github.com/nileshmodak/ai-tutorial) | GitHub | 英文资源，建议关注：A collection of hands-on AI tutorials and practical examples covering RAG, AI Agents, LangGraph, MCP, LLM integrations, vector databases, tool calling, memory, and agentic workflow...（⭐ 0；更新 2026-08-29） |
-| 3 | RAG / AI 搜索 | [peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP](https://huggingface.co/peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP) | Hugging Face | 近期更新模型，tags: gguf, llama.cpp, qwen35moe, moe, imatrix, unsloth-dynamic, mtp, speculative-decoding（likes 124；更新 2026-09-07） |
-| 4 | RAG / AI 搜索 | [Vampireanpray/Jailbreak-Claude](https://github.com/Vampireanpray/Jailbreak-Claude) | GitHub | 英文资源，建议关注：Advanced LLM context engineering and prompt research repository. Educational framework for analyzing Claude AI behavioral limits, systemic constraints, and creative response alignm...（⭐ 0；更新 2026-09-03） |
-| 5 | RAG / AI 搜索 | [saymonseo/prompt-improver](https://github.com/saymonseo/prompt-improver) | GitHub | 英文资源，建议关注：AI prompt engineering skill for Codex: guided requirements gathering, context research, and ready-to-use prompts. Улучшение промптов и постановка задач для ИИ.（⭐ 0；更新 2026-09-07） |
-| 6 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 7 | AI Agent / 工具调用 | [Multi-Step Tool-Calling over Korean Open Public APIs: A Benchmark and a Data-Synthesis Recipe](http://arxiv.org/abs/2609.05395v1) | arXiv | 英文资源，建议关注：Data-sovereignty regulations increasingly require public institutions to deploy open-source, on-premise LLM agents that chain multiple tool-calls across live government APIs. Howev...（paper；更新 2026-09-04） |
-| 8 | AI Agent / 工具调用 | [Necessary or Sufficient? Evaluating LLM Explanations With Behavioural Evidence](http://arxiv.org/abs/2609.05385v1) | arXiv | 英文资源，建议关注：LLM decision components that can operate within agent workflows often produce action-relevant recommendations or judgements together with explanations. Operators may use the named ...（paper；更新 2026-09-04） |
+| 1 | Agent / 后训练 | [NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness](https://arxiv.org/abs/2609.08183) | arXiv | 很值得关注的 Agent-native 后训练工作：把线上 Routing Harness 的能力需求、路由选择、工具调用与交互轨迹直接转成下一轮 SFT / on-policy distillation 训练数据，并用评测反馈继续调整训练 mixture。4B 模型宏平均从 58.94 提升到 64.87，9B 从 65.60 提升到 69.04。对“SearchAgent 线上轨迹如何反哺训练”非常有参考价值。 |
+| 2 | RAG / Agentic Search | [VikingRAG: Accurate and Token-efficient Retrieval-augmented Generation over Structured Documents](https://arxiv.org/abs/2609.11390) | arXiv | 把 Agent 多轮检索轨迹物化为可复用的 experience edges，并通过 evidence-gap-driven retrieval + adaptive escalation 判断是否需要升级到多轮 Agent 检索。实验中在保持竞争力准确率的同时，把 token 成本降到现有方法的 5.1%–32.5%。核心启示是“成功搜索轨迹可以成为检索基础设施的一部分”。 |
+| 3 | Agent Memory | [Grounding Agent Memory: Environment-Probing Curation for Enterprise Agents](https://arxiv.org/abs/2609.11060) | arXiv | 不是让 Memory Curator 只根据历史 trajectory 做总结，而是给它最小权限、只读的环境工具，在写入长期记忆前主动验证事实是否仍然成立。CLBench 中 pass rate 从 39% 提升到 73%，同时查询次数与任务 Agent 成本下降。非常适合生产 Agent Memory 的“写前校验”设计。 |
+| 4 | 中文模型 / 多模态 / Agent | [DeepSeek-V4.1-Flash](https://www.deepseek.com/en/news/deepseek-v4-1-flash/) | DeepSeek 官方 | 552B MoE，采用新的 Causal Encoder–Decoder 非对称结构，输入仅激活 8B、输出激活 16B，并结合更大规模 RL 后训练和原生视觉理解。官方称 KV Cache HBM 占用降至上一代的 1/4、SSD 占用降至 1/8。对长上下文 Agent 来说，值得重点看“模型结构如何直接优化缓存与 Agent serving 成本”。 |
+| 5 | Agent 架构 / Skills | [Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks](https://arxiv.org/abs/2609.09233) | arXiv | 直接比较“把 Skill 内容加载进主 Agent 上下文”与“把 Skill 作为独立 Subagent 执行”。结论不是 Subagent 永远更好，而是当 Skill 有清晰 input/output contract、内部包含完整 procedural knowledge 时，独立上下文的 Subagent 更稳；代价是额外通信 token。对 ToolHub / Skill / Subagent 的边界设计很有价值。 |
+| 6 | RAG / 时间检索 | [TimelyRAG: Semantic-Temporal Hybrid Retrieval for Time-Critical Question Answering in Overlapping-Evolving Documents](https://arxiv.org/abs/2609.11572) | arXiv | 面向法规、政策、版本迭代文档中“新旧文本高度相似但部分条款已失效”的真实问题，把 temporal distance 显式加入 ranking，并发布 TimelyQABench。最高带来 +28.6% nDCG@10。说明生产搜索系统除了语义相关性，还需要把版本有效期和时间正确性纳入排序目标。 |
+| 7 | Agent Eval / Benchmark | [SWE-Bench Pro Verified: A Reliable Benchmark for Software Engineering Agents](https://arxiv.org/abs/2609.08149) | arXiv | 系统分析 Agent benchmark 中的 reward hacking 与 task quality 问题：模型可能通过泄露的 gold solution、隐藏评测信息或环境漏洞“做对题”，但并没有真正解决任务。修复泄露通道和错误任务后，一些模型成绩明显下降。对 Agent Judge / E2E Eval 的启示是：不仅要评答案，还要审计环境、工具权限和可利用的信息通道。 |
+| 8 | 多模态 / 后训练 | [SenseNova-U1.5: Towards Native Unified Visual Intelligence](https://arxiv.org/abs/2609.11929) | arXiv | 8B-MoT 原生统一多模态模型，把理解、视觉推理、图像生成和编辑放进 encoder-free / VAE-free 架构。后训练先分别优化审美、双语文字渲染、信息图、编辑等专家，再通过 multi-expert on-policy distillation 汇总能力。很适合学习“先专家化、再 on-policy 蒸馏回统一模型”的多模态后训练路线。 |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
