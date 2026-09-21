@@ -6,25 +6,25 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 9 月 14 日
+> 最近更新：2026 年 9 月 21 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-09-14。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-09-21。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-09-14） |
-| 2 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 3 | RAG / AI 搜索 | [saymonseo/prompt-improver](https://github.com/saymonseo/prompt-improver) | GitHub | 英文资源，建议关注：AI prompt engineering skill for Codex: guided requirements gathering, context research, and ready-to-use prompts. Улучшение промптов и постановка задач для ИИ.（⭐ 0；更新 2026-09-07） |
-| 4 | RAG / AI 搜索 | [ASTRIL-MPC: Autonomous Traversal Framework of Articulated Tracked Robots with Language-Guided Neural-Kinematic MPC](http://arxiv.org/abs/2609.13083v1) | arXiv | 英文资源，建议关注：In urban search and rescue, articulated tracked robots (ATRs) must traverse structured but contact-rich environments such as stairwells and cluttered building interiors. Reliable a...（paper；更新 2026-09-11） |
-| 5 | RAG / AI 搜索 | [Expert-Space Exploration in MoE Reinforcement Learning](http://arxiv.org/abs/2609.13058v1) | arXiv | 英文资源，建议关注：Reinforcement learning (RL) has become central to post-training of large language models. Recent advances in RL for Mixture-of-Experts (MoE) models have primarily focused on improv...（paper；更新 2026-09-11） |
-| 6 | AI Agent / 工具调用 | [Mitigating Emergent Collusion in LLM Pricing Agents](http://arxiv.org/abs/2609.13037v1) | arXiv | 英文资源，建议关注：Recent work shows that LLM-based pricing agents can produce supracompetitive outcomes in repeated oligopoly environments without being explicitly instructed to collude. We reproduc...（paper；更新 2026-09-11） |
-| 7 | AI Agent / 工具调用 | [Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents](http://arxiv.org/abs/2609.12896v1) | arXiv | 英文资源，建议关注：LLM-based agents rely on heterogeneous interaction capabilities to accomplish complex tasks. Existing approaches often distribute these capabilities across multiple LoRA adapters, ...（paper；更新 2026-09-11） |
-| 8 | 开源模型 / 模型平台 | [GenOR-Twin: A Semantic Middleware for Integrating Operational Discourse with Mathematical Optimization](http://arxiv.org/abs/2609.12863v1) | arXiv | 英文资源，建议关注：We introduce GenOR-Twin, a neuro-symbolic framework that bridges the translation gap between unstructured operational logs and rigorous mathematical optimization. Our architecture ...（paper；更新 2026-09-11） |
+| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-09-21） |
+| 2 | AI Agent / 工具调用 | [launchdarkly-labs/devrel-agents-tutorial](https://github.com/launchdarkly-labs/devrel-agents-tutorial) | GitHub | 英文资源，建议关注：Multi-agent AI chatbot with dynamic    configuration using LangGraph   workflows, RAG search, MCP tools,   and LaunchDarkly AI Configs.   Control AI behavior, swap models   (Claude...（⭐ 6；更新 2026-09-15） |
+| 3 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
+| 4 | 后训练 / 强化学习 | [llm-calibration/DCPO-hotpot](https://huggingface.co/llm-calibration/DCPO-hotpot) | Hugging Face | 近期更新模型，tags: transformers, safetensors, qwen2, text-generation, generated_from_trainer, trl, grpo, conversational（likes 0；更新 2026-09-21） |
+| 5 | RAG / AI 搜索 | [saymonseo/prompt-improver](https://github.com/saymonseo/prompt-improver) | GitHub | 英文资源，建议关注：AI prompt engineering skill for Codex: guided requirements gathering, context research, and ready-to-use prompts. Улучшение промптов и постановка задач для ИИ.（⭐ 0；更新 2026-09-07） |
+| 6 | 开源模型 / 模型平台 | [ReliquaryForge/qwen3-4b-base-dapo-v4](https://huggingface.co/ReliquaryForge/qwen3-4b-base-dapo-v4) | Hugging Face | 近期更新模型，tags: transformers, safetensors, qwen3, text-generation, conversational, arxiv:2505.09388, license:apache-2.0, text-generation-inference（likes 7；更新 2026-09-21） |
+| 7 | RAG / AI 搜索 | [peculiar-ragdoll/Sharp-Spark-X2.5-4B-GGUF](https://huggingface.co/peculiar-ragdoll/Sharp-Spark-X2.5-4B-GGUF) | Hugging Face | 近期更新模型，tags: gguf, llama.cpp, imatrix, spark2_5, long-context, coding, sharp-template, token-efficient（likes 27；更新 2026-09-20） |
+| 8 | 开源模型 / 模型平台 | [llm-semantic-router/Decision-1.0-Sol](https://huggingface.co/llm-semantic-router/Decision-1.0-Sol) | Hugging Face | 近期更新模型，tags: safetensors, decision-model, classification, qwen3_5, custom-code, pytorch, rocm, choice（likes 3；更新 2026-09-21） |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
