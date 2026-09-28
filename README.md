@@ -17,14 +17,14 @@
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | 后训练 / Tool Use | [ToolCompass](https://arxiv.org/abs/2609.25678) | arXiv | 关注“工具试错”而非只监督最终成功；把已见工具的功能经验迁移到未见工具，论文报告 AppWorld OOD 相对 vanilla post-training 最高提升 10.71pt。 |
-| 2 | RAG / AI 搜索 | [Self-Evolving Search Index](https://arxiv.org/abs/2609.19656) | arXiv | Optimizer 自动诊断检索缺口、选择性重写 index keys，并用 Query Simulator 主动探索未覆盖需求，让搜索索引能够根据真实失败持续自演化。 |
-| 3 | Agent 评测 / 稳定性 | [Your Agent Aced the Task. Will It Do It Again?](https://huggingface.co/blog/ibm-research/altk-evolve-consistency) | IBM Research / Hugging Face | Agent 评测不能只看平均成功率；案例中 Mean@5 为 77.4%，但五次都成功的 Pass^5 仅 53.0%，应把重复运行稳定性纳入 E2E Eval。 |
-| 4 | Agent Memory / 自进化 | [Designer-RSI](https://arxiv.org/abs/2609.22086) | arXiv / Adobe Research | 冻结模型权重，仅用真实用户轨迹持续扩展和修正程序性 Skill Memory；5 轮后技能从 76 增至 139，GenEval2 执行成功率从 72.7% 升至 99.3%。 |
-| 5 | Agent 安全 / Action Guardrail | [APort Vault](https://arxiv.org/abs/2609.22076) | arXiv | 4,371 条攻击、14 个模型、225,964 次评估；确定性 pre-action authorization layer 将未授权收款人的实际转账从 140 次降到 0。 |
-| 6 | Agent RL 基础设施 | [One sandbox per rollout](https://huggingface.co/blog/sergiopaniego/rl-environments-2026) | Hugging Face | 总结 2026 Agent RL 栈：每个 rollout 一个隔离 sandbox，环境/Harness 保持状态，生成与训练异步解耦；瓶颈正在从 RL loss 转向环境、验证器和调度。 |
-| 7 | 多模态 / 推理优化 | [LFM2.5-VL-DSpark](https://www.liquid.ai/blog/lfm2-5-vl-dspark) | Liquid AI | 给 3B VLM 加 280M draft model 做精确 speculative decoding，官方报告 GPU decode 最高 2.66×、端侧 3.13×，端到端最高 2.27×/2.62×。 |
-| 8 | Agent Harness / 平台 | [Introducing the Agents API](https://openai.com/index/introducing-the-agents-api/) | OpenAI | 将 context 管理、MCP、Web Search、代码/文件环境、subagent 并行和长期任务运行时托管为 API，进一步印证 Agent 能力越来越取决于 Harness。 |
+| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-09-27） |
+| 2 | AI Agent / 工具调用 | [launchdarkly-labs/devrel-agents-tutorial](https://github.com/launchdarkly-labs/devrel-agents-tutorial) | GitHub | 英文资源，建议关注：Multi-agent AI chatbot with dynamic    configuration using LangGraph   workflows, RAG search, MCP tools,   and LaunchDarkly AI Configs.   Control AI behavior, swap models   (Claude...（⭐ 6；更新 2026-09-15） |
+| 3 | AI Agent / 工具调用 | [Eneyire/ai-agent-cli](https://github.com/Eneyire/ai-agent-cli) | GitHub | 英文资源，建议关注：Developed a lightweight, Claude Code-inspired AI coding agent using Python and the OpenAI SDK, powered by open-source LLMs through OpenRouter. The project explores agentic AI patte...（⭐ 0；更新 2026-09-27） |
+| 4 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
+| 5 | AI Agent / 工具调用 | [StarlinChristopher/open-code-review](https://github.com/StarlinChristopher/open-code-review) | GitHub | 英文资源，建议关注：Open Code Review is an open-source, AI-powered code review framework developed from internal optimizations at Alibaba to handle large-scale enterprise repositories. It utilizes a h...（⭐ 0；更新 2026-09-25） |
+| 6 | AI Agent / 工具调用 | [AgentWorld: Benchmarking Long-Horizon Collaboration of Multi-agent LLMs](http://arxiv.org/abs/2609.31590v1) | arXiv | 英文资源，建议关注：Existing multi-agent benchmarks primarily test in competitive settings, short-horizon interactions under 20 steps, or simply aggregate individual performance, failing to isolate an...（paper；更新 2026-09-25） |
+| 7 | AI Agent / 工具调用 | [DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education](http://arxiv.org/abs/2609.31568v1) | arXiv | 英文资源，建议关注：AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT...（paper；更新 2026-09-25） |
+| 8 | AI Agent / 工具调用 | [Multi-agent Scaling Across Disjunctive and Compensatory Tasks](http://arxiv.org/abs/2609.31563v1) | arXiv | 英文资源，建议关注：Multi-agent LLM systems are often expected to improve as team size increases, yet the scaling behavior may depend on task structure. Our central contribution is to introduce Steine...（paper；更新 2026-09-25） |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
