@@ -6,25 +6,25 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 9 月 21 日
+> 最近更新：2026 年 9 月 28 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-09-21。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-09-28。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-09-21） |
-| 2 | AI Agent / 工具调用 | [launchdarkly-labs/devrel-agents-tutorial](https://github.com/launchdarkly-labs/devrel-agents-tutorial) | GitHub | 英文资源，建议关注：Multi-agent AI chatbot with dynamic    configuration using LangGraph   workflows, RAG search, MCP tools,   and LaunchDarkly AI Configs.   Control AI behavior, swap models   (Claude...（⭐ 6；更新 2026-09-15） |
-| 3 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 4 | 后训练 / 强化学习 | [llm-calibration/DCPO-hotpot](https://huggingface.co/llm-calibration/DCPO-hotpot) | Hugging Face | 近期更新模型，tags: transformers, safetensors, qwen2, text-generation, generated_from_trainer, trl, grpo, conversational（likes 0；更新 2026-09-21） |
-| 5 | RAG / AI 搜索 | [saymonseo/prompt-improver](https://github.com/saymonseo/prompt-improver) | GitHub | 英文资源，建议关注：AI prompt engineering skill for Codex: guided requirements gathering, context research, and ready-to-use prompts. Улучшение промптов и постановка задач для ИИ.（⭐ 0；更新 2026-09-07） |
-| 6 | 开源模型 / 模型平台 | [ReliquaryForge/qwen3-4b-base-dapo-v4](https://huggingface.co/ReliquaryForge/qwen3-4b-base-dapo-v4) | Hugging Face | 近期更新模型，tags: transformers, safetensors, qwen3, text-generation, conversational, arxiv:2505.09388, license:apache-2.0, text-generation-inference（likes 7；更新 2026-09-21） |
-| 7 | RAG / AI 搜索 | [peculiar-ragdoll/Sharp-Spark-X2.5-4B-GGUF](https://huggingface.co/peculiar-ragdoll/Sharp-Spark-X2.5-4B-GGUF) | Hugging Face | 近期更新模型，tags: gguf, llama.cpp, imatrix, spark2_5, long-context, coding, sharp-template, token-efficient（likes 27；更新 2026-09-20） |
-| 8 | 开源模型 / 模型平台 | [llm-semantic-router/Decision-1.0-Sol](https://huggingface.co/llm-semantic-router/Decision-1.0-Sol) | Hugging Face | 近期更新模型，tags: safetensors, decision-model, classification, qwen3_5, custom-code, pytorch, rocm, choice（likes 3；更新 2026-09-21） |
+| 1 | 后训练 / Tool Use | [ToolCompass: Guiding Tool Trialing, Not Suppressing It](https://arxiv.org/abs/2609.25678) | arXiv | 关注“工具试错”而非只监督最终成功。通过按工具功能组织表示，把已见工具上的经验迁移到未见工具；无需 ground-truth 调用轨迹或访问未见工具，且不增加推理开销。论文报告在 AppWorld OOD 上相对 vanilla post-training 最高提升 10.71pt。 |
+| 2 | RAG / AI 搜索 | [Self-Evolving Search Index](https://arxiv.org/abs/2609.19656) | arXiv | 把“索引优化”本身做成 Agent：Optimizer 自动诊断检索缺口、选择性重写 index keys，并通过 Query Simulator 主动探索未覆盖需求。对 SearchAgent 很有启发——索引不再是静态基础设施，而可以根据失败日志持续自演化。 |
+| 3 | Agent 评测 / 稳定性 | [Your Agent Aced the Task. Will It Do It Again?](https://huggingface.co/blog/ibm-research/altk-evolve-consistency) | IBM Research / Hugging Face | 提醒 Agent 评测不能只看平均成功率。案例中 Mean@5 为 77.4%，但五次都成功的 Pass^5 仅 53.0%，存在 24.4pt consistency gap；适合把“同任务多次重复稳定性”加入 E2E Agent Eval。 |
+| 4 | Agent Memory / 自进化 | [Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design](https://arxiv.org/abs/2609.22086) | arXiv / Adobe Research | 冻结模型权重，仅通过真实用户 brief、自动评分轨迹和外部程序性 Skill Memory 持续扩展/修正技能库。5 轮后技能从 76 增至 139，GenEval2 执行成功率从 72.7% 升至 99.3%，说明“轨迹→Skill→复用”是无需重新训练模型的有效自进化路线。 |
+| 5 | Agent 安全 / Action Guardrail | [APort Vault: Benchmarking AI Agent Payment Authorization](https://arxiv.org/abs/2609.22076) | arXiv | 用 4,371 条人类攻击、14 个模型和 225,964 次评估测试支付 Agent。确定性的 pre-action authorization layer 把未授权收款人的实际转账从 140 次降为 0，说明高风险 Agent 的权限边界不应只交给模型判断。 |
+| 6 | Agent RL 基础设施 | [One sandbox per rollout, or how labs run RL for agents in 2026](https://huggingface.co/blog/sergiopaniego/rl-environments-2026) | Hugging Face | 总结 2026 年主流 Agent RL 基础设施：一个 rollout 对应一个隔离 sandbox，环境/Harness 持久化状态，生成与训练异步解耦。核心启示是 Agent 后训练的瓶颈正在从 RL 算法转向环境、验证器、沙箱和调度系统。 |
+| 7 | 多模态 / 推理优化 | [LFM2.5-VL-DSpark: Accelerating vision-language models](https://www.liquid.ai/blog/lfm2-5-vl-dspark) | Liquid AI | 给 3B VLM 加一个 280M draft model 做精确 speculative decoding；官方报告 GPU decode 最高 2.66×、端侧 3.13×，端到端最高 2.27×/2.62×。对多模态 Agent 降低视觉链路 RT 很有工程价值。 |
+| 8 | Agent Harness / 平台 | [Introducing the Agents API](https://openai.com/index/introducing-the-agents-api/) | OpenAI | 把长期 Agent 所需的 context 管理、工具调用、MCP、Web Search、代码/文件环境、subagent 并行和长任务运行时托管成 API。趋势很明确：Agent 能力越来越取决于 Harness，而不只是底座模型。 |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
