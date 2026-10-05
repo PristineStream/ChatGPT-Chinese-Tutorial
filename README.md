@@ -6,25 +6,25 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 9 月 28 日
+> 最近更新：2026 年 10 月 5 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-09-28。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-10-05。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
 | 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-09-27） |
-| 2 | AI Agent / 工具调用 | [launchdarkly-labs/devrel-agents-tutorial](https://github.com/launchdarkly-labs/devrel-agents-tutorial) | GitHub | 英文资源，建议关注：Multi-agent AI chatbot with dynamic    configuration using LangGraph   workflows, RAG search, MCP tools,   and LaunchDarkly AI Configs.   Control AI behavior, swap models   (Claude...（⭐ 6；更新 2026-09-15） |
-| 3 | AI Agent / 工具调用 | [Eneyire/ai-agent-cli](https://github.com/Eneyire/ai-agent-cli) | GitHub | 英文资源，建议关注：Developed a lightweight, Claude Code-inspired AI coding agent using Python and the OpenAI SDK, powered by open-source LLMs through OpenRouter. The project explores agentic AI patte...（⭐ 0；更新 2026-09-27） |
-| 4 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 5 | AI Agent / 工具调用 | [StarlinChristopher/open-code-review](https://github.com/StarlinChristopher/open-code-review) | GitHub | 英文资源，建议关注：Open Code Review is an open-source, AI-powered code review framework developed from internal optimizations at Alibaba to handle large-scale enterprise repositories. It utilizes a h...（⭐ 0；更新 2026-09-25） |
-| 6 | AI Agent / 工具调用 | [AgentWorld: Benchmarking Long-Horizon Collaboration of Multi-agent LLMs](http://arxiv.org/abs/2609.31590v1) | arXiv | 英文资源，建议关注：Existing multi-agent benchmarks primarily test in competitive settings, short-horizon interactions under 20 steps, or simply aggregate individual performance, failing to isolate an...（paper；更新 2026-09-25） |
-| 7 | AI Agent / 工具调用 | [DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education](http://arxiv.org/abs/2609.31568v1) | arXiv | 英文资源，建议关注：AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT...（paper；更新 2026-09-25） |
-| 8 | AI Agent / 工具调用 | [Multi-agent Scaling Across Disjunctive and Compensatory Tasks](http://arxiv.org/abs/2609.31563v1) | arXiv | 英文资源，建议关注：Multi-agent LLM systems are often expected to improve as team size increases, yet the scaling behavior may depend on task structure. Our central contribution is to introduce Steine...（paper；更新 2026-09-25） |
+| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-10-05） |
+| 2 | RAG / AI 搜索 | [kawsar-95/All-Necessary-Topics-Related-to-AI-Engineering](https://github.com/kawsar-95/All-Necessary-Topics-Related-to-AI-Engineering) | GitHub | 英文资源，建议关注：Single-file HTML reference guides on LLM Fundamentals, Prompt Engineering, and Context Engineering — dual-voice (technical + layman's terms) with diagrams and cited research.（⭐ 0；更新 2026-10-05） |
+| 3 | AI Agent / 工具调用 | [Eneyire/ai-agent-cli](https://github.com/Eneyire/ai-agent-cli) | GitHub | 英文资源，建议关注：Developed a lightweight, Claude Code-inspired AI coding agent using Python and the OpenAI SDK, powered by open-source LLMs through OpenRouter. The project explores agentic AI patte...（⭐ 0；更新 2026-10-03） |
+| 4 | AI Agent / 工具调用 | [FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution](http://arxiv.org/abs/2610.03675v1) | arXiv | 英文资源，建议关注：LLM-guided evolutionary methods, such as AlphaEvolve, have emerged as powerful approaches for challenging computational optimization problems, such as circle packing. However, prio...（paper；更新 2026-10-02） |
+| 5 | AI Agent / 工具调用 | [aryasri15/ppo-ML-Agents-SoccerTwos](https://huggingface.co/aryasri15/ppo-ML-Agents-SoccerTwos) | Hugging Face | 近期更新模型，tags: ml-agents, onnx, reinforcement-learning, ML-Agents-SoccerTwos, deep-rl-course, model-index, region:us（likes 0；更新 2026-10-05） |
+| 6 | AI Agent / 工具调用 | [aryasri15/ppo-ML-Agents-Pyramids](https://huggingface.co/aryasri15/ppo-ML-Agents-Pyramids) | Hugging Face | 近期更新模型，tags: ml-agents, tensorboard, onnx, reinforcement-learning, ML-Agents-Pyramids, deep-rl-course, model-index, region:us（likes 0；更新 2026-10-05） |
+| 7 | AI Agent / 工具调用 | [aryasri15/ppo-ML-Agents-SnowballTarget](https://huggingface.co/aryasri15/ppo-ML-Agents-SnowballTarget) | Hugging Face | 近期更新模型，tags: ml-agents, tensorboard, onnx, reinforcement-learning, ML-Agents-SnowballTarget, deep-rl-course, model-index, region:us（likes 0；更新 2026-10-05） |
+| 8 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
