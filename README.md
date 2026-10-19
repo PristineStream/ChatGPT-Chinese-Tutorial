@@ -6,25 +6,26 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 10 月 12 日
+> 最近更新：2026 年 10 月 19 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-10-12。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 自动生成时间：2026-10-19。重点覆盖 10 月 12—19 日公开工作。
 
-| 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
-| ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-10-12） |
-| 2 | AI Agent / 工具调用 | [nileshmodak/ai-tutorial](https://github.com/nileshmodak/ai-tutorial) | GitHub | 英文资源，建议关注：A collection of hands-on AI tutorials and practical examples covering RAG, AI Agents, LangGraph, MCP, LLM integrations, vector databases, tool calling, memory, and agentic workflow...（⭐ 0；更新 2026-10-10） |
-| 3 | RAG / AI 搜索 | [kawsar-95/All-Necessary-Topics-Related-to-AI-Engineering](https://github.com/kawsar-95/All-Necessary-Topics-Related-to-AI-Engineering) | GitHub | 英文资源，建议关注：Single-file HTML reference guides on LLM Fundamentals, Prompt Engineering, and Context Engineering — dual-voice (technical + layman's terms) with diagrams and cited research.（⭐ 0；更新 2026-10-08） |
-| 4 | AI Agent / 工具调用 | [Eneyire/ai-agent-cli](https://github.com/Eneyire/ai-agent-cli) | GitHub | 英文资源，建议关注：Developed a lightweight, Claude Code-inspired AI coding agent using Python and the OpenAI SDK, powered by open-source LLMs through OpenRouter. The project explores agentic AI patte...（⭐ 0；更新 2026-10-03） |
-| 5 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
-| 6 | 后训练 / 强化学习 | [Images Talk Back: Guiding MMDiTs by Suppressing Image-to-Text Feedback](http://arxiv.org/abs/2610.13941v1) | arXiv | 英文资源，建议关注：Multimodal diffusion transformers (MMDiTs) allow the evolving image to update internal text representations through joint attention. These representations then guide subsequent ima...（paper；更新 2026-10-09） |
-| 7 | Prompt / 上下文工程 | [Not Just an Evaluation: A Case Study of Discourse Particle Sensitivity in Language Models](http://arxiv.org/abs/2610.13794v1) | arXiv | 英文资源，建议关注：Discourse particles subtly shape the flow of discourse by reflecting conversational context and interlocutor attitudes, often leaving the truth-conditional meaning untouched. They ...（paper；更新 2026-10-09） |
-| 8 | AI Agent / 工具调用 | [Matched-Context Group Policy Optimization for LLM Agent Training](http://arxiv.org/abs/2610.13755v1) | arXiv | 英文资源，建议关注：Training long-horizon language model agents requires assigning credit to intermediate decisions from sparse terminal feedback. Within a finite group of sibling rollouts, useful act...（paper；更新 2026-10-09） |
+| 推荐 | 方向 | 资源 | 学习价值 |
+| --- | --- | --- | --- |
+| 1 | Agent 后训练 | [Agent-Reflex（10-13）](https://arxiv.org/abs/2610.17953) | 噪声工具反馈下，反思技能挖掘、Reflective SFT 与 on-policy 优化。 |
+| 2 | Agent 评测 | [BizBench（10-14）](https://arxiv.org/abs/2610.20424) | 789 份文档、601 个工具、50 个任务，分开验证目标与过程约束。 |
+| 3 | Agent RL | [MLExpert（10-15）](https://arxiv.org/abs/2610.22344) | 可执行实验环境，Windowed Interaction RL 处理长程信用分配。 |
+| 4 | 蒸馏 | [Compatibility Matters（10-15）](https://arxiv.org/abs/2610.21234) | On-policy 蒸馏中的 token 级教师路由与兼容性。 |
+| 5 | Skill | [FedSkillGit（10-15）](https://arxiv.org/abs/2610.21348) | 通过局部 patch、隐私过滤和回归验证演化 Skill。 |
+| 6 | 多模态 GRPO | [SCOPE（10-15）](https://arxiv.org/abs/2610.22264) | 文生图提示词的语义 span 级梯度权重。 |
+| 7 | Agentic Search | [IndexAct（10-06）](https://arxiv.org/abs/2610.07960) | 候选集合持久状态与按需证据读取；本期补充阅读。 |
+| 8 | MCP | [Skills Extension](https://skills.extensions.modelcontextprotocol.io/specification/stable/skills) | skills/list、skills/get、按需加载及逐项授权。 |
+| 9 | ChatGPT | [官方更新（10-15～16）](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) | GPT-Live-1.1、Slides 协作和 GPT-6 Pro 多 Agent 改进。 |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
