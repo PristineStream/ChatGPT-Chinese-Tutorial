@@ -13,18 +13,18 @@
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-10-26。全网精选 ChatGPT / 中文 LLM / Agent / RAG / MCP / 后训练 / 多模态的近期高价值学习资料；不限中英文来源，统一以中文总结。
+> 自动生成时间：2026-10-26。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
-| 推荐 | 方向 | 资料（发布日期） | 来源 | 推荐理由 |
-| --- | --- | --- | --- | --- |
-| 1 | Agent RL / 可验证奖励 | [Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox](https://huggingface.co/blog/microsoft/thinkingbox-training)（10-22） | Microsoft × Hugging Face | 507 个有状态任务×20 次评估；把终态数据库检查直接用作 GRPO reward，Qwen3.8-27B 的单次成功率从 51.70% 升至 60.78%，20 次全成功的任务数从 38 升至 107。尤其适合学习 terminal-state reward 和 policy-relative curriculum。 |
-| 2 | 多模态检索 / RAG | [Nemotron 3.5 Embed, Rerank, and Parse](https://huggingface.co/blog/nvidia/nemotron-retriever-world-class-agentic-retrieval)（10-21） | NVIDIA | 同时开放 8B/1B 多模态 Embed、8B Rerank、631M Parse；评估覆盖视觉文档与多语言。官方特定实验中，加入 reranker 后每个 Agent query 的推理 token 成本约下降 13%–14%。 |
-| 3 | Agentic RL / 数据质量 | [Overfit First, Then Scale: Arctic-SWE](https://www.snowflake.com/en/blog/engineering/arctic-swe-agentic-rl/)（10-23） | Snowflake AI Research | 主张先证明 RL recipe 可以在小数据上稳定拟合，再扩任务。Qwen3.5-4B 使用清洗数据后 SWE-bench Verified/Pro 达 65.0%/38.3%；还发现部分任务的测试允许错误 patch 通过。 |
-| 4 | Agent Memory / Skill 自进化 | [ALTK-Evolve: Learned Memory for Customer Service](https://huggingface.co/blog/ibm-research/altk-evolve-bc)（10-20） | IBM Research | 从成功与失败 trajectory 挖掘可复用 playbook，无需改模型权重；在零样本外的 held-out 零售任务中，GPT-4.1 Agent 的四次全成功率（Pass^4）从 57.5% 升至 67.5%。须同时关注增加的上下文 token 成本。 |
-| 5 | MCP / Agent 开放生态 | [AAIF Announces Agent Skills, Open Responses, OpenEnv and OpenSandbox](https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox)（10-22） | Linux Foundation | 四个项目分别覆盖可移植 Skills、跨供应商模型 API、RL 环境、执行沙箱；与 MCP/A2A 共同形成互操作 Agent 基础设施，并不意味着 MCP 规范本身同日变更。 |
-| 6 | 后训练 / 学习教程 | [A Curriculum for Post-training Agents](https://huggingface.co/blog/huggingface/train-agents)（10-20） | Hugging Face | 可跟练的 Agent 后训练路线：SFTTrainer → DistillationTrainer → GRPOTrainer → OpenEnv → AsyncGRPOTrainer。把 trace、token 级蒸馏、outcome reward、长回合工具环境串成体系。 |
-| 7 | 多模态 / 世界模型 | [Mundo: From Seeing a Place to Simulating What Happens There](https://huggingface.co/blog/Luo-Yihang/mundo-world-model)（10-23） | 研究团队 / Hugging Face | 用多视图图片构建 3D proxy + scene program，再模拟交互并渲染视频，实现感知→状态→动作→验证。作者说明重建约需 10–20 分钟，暂不适合低时延在线 Agent。 |
-| 8 | 大规模 Agent Harness | [How Third Moment Research Runs 10,000 Agents for 36+ Hours](https://openai.com/index/third-moment-research/)（本周公开案例） | OpenAI / Third Moment | 真实长任务使用外层 Supervisor 决定 retry、terminate 或 human review；通过缓存、异步等待与上下文压缩减少工具轮询和 token 浪费，适合生产 Harness 调度参考。 |
+| 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
+| ---- | ---- | ---- | ---- | ---- |
+| 1 | RAG / AI 搜索 | [kawsar-95/ai-learning-roadmap](https://github.com/kawsar-95/ai-learning-roadmap) | GitHub | 英文资源，建议关注：Single-file HTML reference guides on LLM Fundamentals, Prompt Engineering, and Context Engineering — dual-voice (technical + layman's terms) with diagrams and cited research.（⭐ 1；更新 2026-10-26） |
+| 2 | AI Agent / 工具调用 | [rust-spielberg/G.L.A.S.S](https://github.com/rust-spielberg/G.L.A.S.S) | GitHub | 英文资源，建议关注：G.L.A.S.S. (Guided Language Agent for Software Synthesis) is an autonomous software synthesis engine built for real-time code generation, interactive execution, and self-healing de...（⭐ 0；更新 2026-10-26） |
+| 3 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-10-12） |
+| 4 | AI Agent / 工具调用 | [Kathrinejames1122/claude-certified-architect-foundations-CCAR-F-study-guide](https://github.com/Kathrinejames1122/claude-certified-architect-foundations-CCAR-F-study-guide) | GitHub | 英文资源，建议关注：A community study guide for Anthropic’s Claude Certified Architect – Foundations (CCAR-F) certification, covering agentic architecture, Claude Code, prompt engineering, MCP integra...（⭐ 0；更新 2026-10-19） |
+| 5 | AI Agent / 工具调用 | [J-Comm: Jacobian-Guided Latent Communication between LLM Agents](http://arxiv.org/abs/2610.32871v1) | arXiv | 英文资源，建议关注：Latent communication requires both an effective continuous reasoning process and an interface through which an external model can leverage its intermediate computation. We present ...（paper；更新 2026-10-23） |
+| 6 | AI Agent / 工具调用 | [XAIHT/Tlamatini](https://github.com/XAIHT/Tlamatini) | GitHub | 英文资源，建议关注：Speak an idea. Build the real thing. Tlamatini brings AI to code, 3D worlds and hardware: voice, live editor tutoring, 86 workflow agents, 110 tools, Unreal Engine, Blender, STM32,...（⭐ 15；更新 2026-10-24） |
+| 7 | RAG / AI 搜索 | [odelpa/linee-guida-2026-rag-it](https://huggingface.co/odelpa/linee-guida-2026-rag-it) | Hugging Face | 近期更新模型，tags: medical, rag, guidelines, medgemma, retrieval, it, en, license:apache-2.0（likes 0；更新 2026-10-26） |
+| 8 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
