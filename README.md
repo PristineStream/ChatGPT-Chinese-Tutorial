@@ -6,25 +6,26 @@
 
 > 本仓库持续更新中文 LLM 学习资源，涵盖国产大模型、开源模型、论文精读、微调部署、强化学习训练、AI Agent、RAG、MCP、A2A、上下文工程、Prompt 工程、推理优化、安全对齐、自进化智能体等内容。
 >
-> 最近更新：2026 年 10 月 26 日
+> 最近更新：2026 年 11 月 2 日
 
 ---
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-10-26。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
+> 最近更新：2026 年 11 月 2 日。本期优先关注 Agentic Search、Agent RL 后训练、MCP 可靠性、长期任务验证、Skill Memory 与多模态重排。英文一手资料统一附中文学习要点。
 
-| 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
+| 推荐 | 方向 | 资源（发布日期） | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | RAG / AI 搜索 | [kawsar-95/ai-learning-roadmap](https://github.com/kawsar-95/ai-learning-roadmap) | GitHub | 英文资源，建议关注：Single-file HTML reference guides on LLM Fundamentals, Prompt Engineering, and Context Engineering — dual-voice (technical + layman's terms) with diagrams and cited research.（⭐ 1；更新 2026-10-26） |
-| 2 | AI Agent / 工具调用 | [rust-spielberg/G.L.A.S.S](https://github.com/rust-spielberg/G.L.A.S.S) | GitHub | 英文资源，建议关注：G.L.A.S.S. (Guided Language Agent for Software Synthesis) is an autonomous software synthesis engine built for real-time code generation, interactive execution, and self-healing de...（⭐ 0；更新 2026-10-26） |
-| 3 | RAG / AI 搜索 | [Aryansingh009/awesome-llm-knowledge-systems](https://github.com/Aryansingh009/awesome-llm-knowledge-systems) | GitHub | 英文资源，建议关注：Map the evolution of LLM knowledge systems from prompt engineering to harness engineering with a comprehensive guide for modern RAG and context architectures.（⭐ 0；更新 2026-10-12） |
-| 4 | AI Agent / 工具调用 | [Kathrinejames1122/claude-certified-architect-foundations-CCAR-F-study-guide](https://github.com/Kathrinejames1122/claude-certified-architect-foundations-CCAR-F-study-guide) | GitHub | 英文资源，建议关注：A community study guide for Anthropic’s Claude Certified Architect – Foundations (CCAR-F) certification, covering agentic architecture, Claude Code, prompt engineering, MCP integra...（⭐ 0；更新 2026-10-19） |
-| 5 | AI Agent / 工具调用 | [J-Comm: Jacobian-Guided Latent Communication between LLM Agents](http://arxiv.org/abs/2610.32871v1) | arXiv | 英文资源，建议关注：Latent communication requires both an effective continuous reasoning process and an interface through which an external model can leverage its intermediate computation. We present ...（paper；更新 2026-10-23） |
-| 6 | AI Agent / 工具调用 | [XAIHT/Tlamatini](https://github.com/XAIHT/Tlamatini) | GitHub | 英文资源，建议关注：Speak an idea. Build the real thing. Tlamatini brings AI to code, 3D worlds and hardware: voice, live editor tutoring, 86 workflow agents, 110 tools, Unreal Engine, Blender, STM32,...（⭐ 15；更新 2026-10-24） |
-| 7 | RAG / AI 搜索 | [odelpa/linee-guida-2026-rag-it](https://huggingface.co/odelpa/linee-guida-2026-rag-it) | Hugging Face | 近期更新模型，tags: medical, rag, guidelines, medgemma, retrieval, it, en, license:apache-2.0（likes 0；更新 2026-10-26） |
-| 8 | 后训练 / 强化学习 | [Dustin0420/llm-course-ch4-chinese-sentiment](https://huggingface.co/Dustin0420/llm-course-ch4-chinese-sentiment) | Hugging Face | 近期更新模型，tags: transformers, safetensors, bert, text-classification, arxiv:1910.09700, text-embeddings-inference, endpoints_compatible, region:us（likes 0；更新 2026-04-21） |
+| 1 | Agentic Search / Reranker | [ACARe: Agent-Context-Aware Reranker](https://arxiv.org/abs/2610.35840)（10-26） | arXiv | 不再只按子查询评分，而把原始用户目标、Agent 当前上下文与文档一起输入重排器；4B 模型在三组检索基准上平均 nDCG@10 较基线提升 0.9–2.0pt，并减少搜索次数。 |
+| 2 | Agent RL / 后训练 | [Multiscale Policy Optimization (MPO)](https://arxiv.org/abs/2610.35013)（10-26） | arXiv | 面向长轨迹 Agent，把 Advantage 估计与重要性采样对齐到 turn 粒度，再在 token 内做细粒度信用分配；在搜索、工具调用和自动化任务上优于多组 RL 基线。 |
+| 3 | Agent Memory / Distillation | [SkillMem](https://arxiv.org/abs/2610.37935)（10-27） | arXiv | 把文本 Skill 蒸馏成可检索的紧凑 latent memory，基座冻结；每个 Skill 约 9.6KB，作者报告最多 4.23× 端到端推理加速，适合研究 Trajectory→Skill 的新存储介质。 |
+| 4 | 长程 Agent / 验证 | [Goal-Aware Dynamic Multi-Agent Collaboration (GAD)](https://arxiv.org/abs/2610.39193)（10-29） | arXiv | 用动态执行依赖图和每个子任务的验收条件组织多 Agent，避免共享长上下文里的目标漂移；强调早期验证与失败恢复，而非只增加 Agent 数。 |
+| 5 | MCP / Interface Eval | [MICA: MCP vs CLI Controlled Study](https://arxiv.org/abs/2610.34298)（10-25） | arXiv | 固定语义能力与运行时、只切换工具接口表示；2,004 条配对轨迹的 94.3% 出现结构性分歧，DART 修复法最高提升 9.0 分，说明工具 Schema / 接口也是策略的一部分。 |
+| 6 | MCP / 严格评测 | [DynamicMCPBench](https://aclanthology.org/2026.emnlp-industry.202/)（2026-10，EMNLP） | ACL Anthology | 在 121 个真实 MCP Server、750 个任务、24 个模型上按可验证副作用和 pass³ 评分，不以最终回答或固定调用路径判分；长工具链成功率显著降低。 |
+| 7 | MCP / 故障注入 | [MCP-Injector: Realistic MCP Faults](https://arxiv.org/abs/2610.32555)（10-23） | arXiv | 基于 1,774 个 MCP 仓库的故障记录建立故障注入分布，实测特定压力配置下任务完成分从 8.08/10 降至 3.23/10；模型参数更大并不自动带来更强容错。 |
+| 8 | Agentic RAG / Query Policy | [RAMP: Retriever-Adaptive Policy](https://aclanthology.org/2026.emnlp-main.1977/)（2026-10，EMNLP） | ACL Anthology | 用黑盒检索器的返回重叠行为得到 backend embedding，使同一 Agent 对不同 Retriever 生成适配查询；四个 QA 基准上达到专用 Agent 的 96%–98%。 |
+| 9 | 多模态 / Reranking | [Multimodal Reranking Is a System One Decision](https://arxiv.org/abs/2610.28435)（10-20） | arXiv | 将 Top-16 候选排成一次多选决策，只读标签 token 的概率，不生成长答案；在 MMEB-V2 视觉文档上报告 84.79 nDCG@5，需注意比较模型存在代际/规模混杂。 |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
