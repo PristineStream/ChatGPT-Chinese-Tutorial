@@ -27,6 +27,19 @@
 | 8 | 多模态 RAG / 可执行检索策略 | [TAP-RAG: Task-Aware Policy Control](https://aclanthology.org/2026.findings-emnlp.1685/) | EMNLP Findings · 2026-10（补充） | 对不同问题自适应选择文本/结构/视觉证据，结合保守拒答；两项多模态文档 QA 的相对匹配基线分别提升 +9.1pt、+4.5pt。可迁移到 VQA / 看后问场景。 |
 | 9 | Agent Harness / MCP 生命周期 | [OpenAI Agents API: Tool updates + Async Compaction](https://developers.openai.com/api/docs/changelog) | OpenAI · 10-30 更新（补充） | 支持在既有 Session 更新完整 Tool 列表，MCP/Function Tool 在下一次模型调用生效；后台 Context Compaction 默认启用，另有自动审核功能。建议跟踪 tool cache、权限与成本的联合变化。 |
 
+### 同日增补：Judge / Rubric 与检索系统
+
+> 增补日期：2026-11-09。保留上述 9 项，新增以下 6 项；RubriX 和 miniReranker 属于旧工作补充，不作为本周首次发布。
+
+| 推荐 | 方向 | 资源 | 来源 / 时间 | 推荐理由与边界 |
+| ---- | ---- | ---- | ---- | ---- |
+| 10 | 非生成式 Judge / Jev 对照 | [RubriX](https://arxiv.org/abs/2610.34875) | 官方介绍 10-16；arXiv 首稿 10-26（补充） | 用 LoRA 编码器分别编码待评输入和评分等级，以相似度输出等级概率，可缓存等级向量。作者报告熟悉领域内未见 Rubric 的 exact accuracy 为 75.4%；不能据此断言全面优于 Jev。约 28ms 延迟限等级缓存后和特定测试条件。 |
+| 11 | 多语言 Judge / Rubric 鲁棒性 | [Same Rule, Different Verdicts](https://arxiv.org/abs/2611.04091) | arXiv · 11-03 首次提交 | 研究韩语/英语与肯定、否定、条件、例外句式；同模型对语义等价条目的判决翻转率为 11%–15%。没有人工真值，只测一致性，不能直接推出英语评分更准确或推广到中文。 |
+| 12 | Judge 持续校准 | [PromptOps](https://arxiv.org/abs/2611.07123) | arXiv · 11-04 首次提交 | 将 Judge drift 维护拆成何时优化、选什么算法、用哪些反馈、如何更新 Prompt；比较 GEPA、SIMBA、Rubric Synthesis 与 exemplar selection。实验为受控分布变化，没有普遍最优的更新算法或频率。 |
+| 13 | RAG / 离线证据表示 | [CacheGraft](https://arxiv.org/abs/2611.07393) | arXiv · 11-05 首次提交 | 离线将较大模型的文档表示融合为 KV cache，在线由小模型使用。4B→0.6B 设置下 30 组比较中 29 组改善、17 组统计显著；这是比较结果数，不是任务成功率，需另计缓存存储与重建成本。 |
+| 14 | Agentic GraphRAG / 迁移性 | [ArcRAG](https://arxiv.org/abs/2611.06481) | arXiv · 11-04 首次提交 | 查询时归纳局部图接口，规划、执行和修复 Cypher，测试固定检索配置在 schema-guided 与 open-IE 图间的迁移。图构建质量仍影响绝对效果。 |
+| 15 | 多模态 Reranker / 缓存 | [miniReranker](https://aclanthology.org/2026.findings-emnlp.1849/) | EMNLP Findings · 2026-10（补充） | Vision-first 格式结合视觉缓存、early exit、局部交互带与 token 裁剪。低于 dense 1% 的运行时间、保持超过 96% 效果仅成立于论文的高复用设置；冷缓存与端到端收益需单测。 |
+
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
 ---
