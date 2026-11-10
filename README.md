@@ -13,32 +13,18 @@
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 自动生成时间：2026-11-09。本期以论文原文、OpenAI 开发者变更记录、ACL Anthology、MCP 官方规范为准；强调对 Agentic Search、Judge / Reward、RAG 和多模态落地的可实验价值。
+> 自动生成时间：2026-11-09。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
-| 推荐 | 方向 | 资源 | 来源 / 时间 | 推荐理由 |
+| 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
 | ---- | ---- | ---- | ---- | ---- |
-| 1 | Agent 后训练 / Multi-turn RL | [What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?](https://arxiv.org/abs/2611.06483) | arXiv · 11-04 新论文 | 用 Pass@(K,T) 显式拆开采样宽度与交互轮数；指出多轮 RL 的收益主要来自错误恢复与长程韧性，预算缩紧时收益下降；提出不同 turn budget 混合训练的 BudgetMix RL。 |
-| 2 | Judge / Reward / Process Signal | [Progress Advantage for LLM Agents](https://arxiv.org/abs/2606.26080) | arXiv · 11-02 更新 v2（原稿 06-24） | 用 RL policy 与 reference policy 的对数概率比提取隐式 step-level advantage，无须专门训练过程奖励模型；验证 test-time scaling、置信度与失败归因，值得作为 Judge / Reward 的轻量基线。 |
-| 3 | 多模态 Agent 安全评测 | [Multimodal-SEA](https://arxiv.org/abs/2611.08281) | arXiv · 11-05 新论文 | 608 个任务、14 个领域、152 个多模态社工攻击场景，含中英文；7 个多模态模型攻击成功率为 7.1%–34.5%。建议将图文伪造、跨模态矛盾、工具执行日志引入 Agent Eval。 |
-| 4 | ChatGPT / 多模态产品与 API | [GPT-Image-2.6 Sunburst / Flare](https://developers.openai.com/api/docs/changelog) | OpenAI · 11-04 发布 | 新增图像生成与编辑模型、可调复杂度、SVG 与动图 GIF，且支持 markup-guided editing；适合测试“视觉生成→可编辑素材→短剧分镜”流水线，但具体价格与延迟应自行实测。 |
-| 5 | Agent RL 基础设施 | [SEER: Scalable Event-Driven Runtime for MARL Environments](https://arxiv.org/abs/2611.07996) | arXiv · 11-05 新论文 | 将环境 step 拆成保持因果顺序的事件队列，独立事件并行处理；在论文的特定 MARL 环境中报告环境执行延迟降低 19.5%–64.9%。不是 LLM-Agent 直接基准，但对并发 rollout 沙箱设计有方法启示。 |
-| 6 | Reward / 低成本决策 | [Predict the Reward, Not the World（ForeCritic）](https://arxiv.org/abs/2610.38439) | arXiv · 10-28 首发，10-30 更新（补充） | 直接比较候选方案的优劣，而非预测完整执行结果；12,438 对 held-out 程序上的选择准确率 79.4%，基于 ML Agent 任务的平均耗时缩短 4.4–7.5 倍。适合研究 pairwise reward / cheap judge。 |
-| 7 | RAG / 端到端评测 | [Retrieval Augmented Generation Compositionality（LASAGNA）](https://arxiv.org/abs/2610.29722) | arXiv · 10-21 首发（补充） | 开源 450 种组合配置 × 8 个 benchmark：组件单项收益不一定能叠加，预测 +47% 的组合实际只提升 +17%；指出 retrieval 与 faithfulness 的最优选择可能冲突。 |
-| 8 | 多模态 RAG / 可执行检索策略 | [TAP-RAG: Task-Aware Policy Control](https://aclanthology.org/2026.findings-emnlp.1685/) | EMNLP Findings · 2026-10（补充） | 对不同问题自适应选择文本/结构/视觉证据，结合保守拒答；两项多模态文档 QA 的相对匹配基线分别提升 +9.1pt、+4.5pt。可迁移到 VQA / 看后问场景。 |
-| 9 | Agent Harness / MCP 生命周期 | [OpenAI Agents API: Tool updates + Async Compaction](https://developers.openai.com/api/docs/changelog) | OpenAI · 10-30 更新（补充） | 支持在既有 Session 更新完整 Tool 列表，MCP/Function Tool 在下一次模型调用生效；后台 Context Compaction 默认启用，另有自动审核功能。建议跟踪 tool cache、权限与成本的联合变化。 |
-
-### 同日增补：Judge / Rubric 与检索系统
-
-> 增补日期：2026-11-09。保留上述 9 项，新增以下 6 项；RubriX 和 miniReranker 属于旧工作补充，不作为本周首次发布。
-
-| 推荐 | 方向 | 资源 | 来源 / 时间 | 推荐理由与边界 |
-| ---- | ---- | ---- | ---- | ---- |
-| 10 | 非生成式 Judge / Jev 对照 | [RubriX](https://arxiv.org/abs/2610.34875) | 官方介绍 10-16；arXiv 首稿 10-26（补充） | 用 LoRA 编码器分别编码待评输入和评分等级，以相似度输出等级概率，可缓存等级向量。作者报告熟悉领域内未见 Rubric 的 exact accuracy 为 75.4%；不能据此断言全面优于 Jev。约 28ms 延迟限等级缓存后和特定测试条件。 |
-| 11 | 多语言 Judge / Rubric 鲁棒性 | [Same Rule, Different Verdicts](https://arxiv.org/abs/2611.04091) | arXiv · 11-03 首次提交 | 研究韩语/英语与肯定、否定、条件、例外句式；同模型对语义等价条目的判决翻转率为 11%–15%。没有人工真值，只测一致性，不能直接推出英语评分更准确或推广到中文。 |
-| 12 | Judge 持续校准 | [PromptOps](https://arxiv.org/abs/2611.07123) | arXiv · 11-04 首次提交 | 将 Judge drift 维护拆成何时优化、选什么算法、用哪些反馈、如何更新 Prompt；比较 GEPA、SIMBA、Rubric Synthesis 与 exemplar selection。实验为受控分布变化，没有普遍最优的更新算法或频率。 |
-| 13 | RAG / 离线证据表示 | [CacheGraft](https://arxiv.org/abs/2611.07393) | arXiv · 11-05 首次提交 | 离线将较大模型的文档表示融合为 KV cache，在线由小模型使用。4B→0.6B 设置下 30 组比较中 29 组改善、17 组统计显著；这是比较结果数，不是任务成功率，需另计缓存存储与重建成本。 |
-| 14 | Agentic GraphRAG / 迁移性 | [ArcRAG](https://arxiv.org/abs/2611.06481) | arXiv · 11-04 首次提交 | 查询时归纳局部图接口，规划、执行和修复 Cypher，测试固定检索配置在 schema-guided 与 open-IE 图间的迁移。图构建质量仍影响绝对效果。 |
-| 15 | 多模态 Reranker / 缓存 | [miniReranker](https://aclanthology.org/2026.findings-emnlp.1849/) | EMNLP Findings · 2026-10（补充） | Vision-first 格式结合视觉缓存、early exit、局部交互带与 token 裁剪。低于 dense 1% 的运行时间、保持超过 96% 效果仅成立于论文的高复用设置；冷缓存与端到端收益需单测。 |
+| 1 | RAG / AI 搜索 | [kawsar-95/ai-learning-roadmap](https://github.com/kawsar-95/ai-learning-roadmap) | GitHub | 英文资源，建议关注：Single-file HTML reference guides on LLM Fundamentals, Prompt Engineering, and Context Engineering — dual-voice (technical + layman's terms) with diagrams and cited research.（⭐ 1；更新 2026-11-07） |
+| 2 | AI Agent / 工具调用 | [wania663/agentic-ai-complete-guide](https://github.com/wania663/agentic-ai-complete-guide) | GitHub | 英文资源，建议关注：A beginner-friendly 6-module Agentic AI learning roadmap covering AI agents, Qoder AI, context engineering, agentic workflows, MCP integrations, and hands-on software engineering p...（⭐ 0；更新 2026-11-03） |
+| 3 | AI Agent / 工具调用 | [Kathrinejames1122/Anthropic-Claude-Certified-Architect-Foundations-CCAR-F](https://github.com/Kathrinejames1122/Anthropic-Claude-Certified-Architect-Foundations-CCAR-F) | GitHub | 英文资源，建议关注：CCAR-F study guide for Claude agentic architecture, MCP integration, Claude Code workflows, prompt engineering, and context reliability.（⭐ 0；更新 2026-10-31） |
+| 4 | AI Agent / 工具调用 | [rust-spielberg/G.L.A.S.S](https://github.com/rust-spielberg/G.L.A.S.S) | GitHub | 英文资源，建议关注：G.L.A.S.S. (Guided Language Agent for Software Synthesis) is an autonomous software synthesis engine built for real-time code generation, interactive execution, and self-healing de...（⭐ 48；更新 2026-10-30） |
+| 5 | AI Agent / 工具调用 | [Prasanth595/Prompt-Engineering-Guide](https://github.com/Prasanth595/Prompt-Engineering-Guide) | GitHub | 英文资源，建议关注：Mirrored from dair-ai/Prompt-Engineering-Guide — 🐙 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.（⭐ 0；更新 2026-10-27） |
+| 6 | AI Agent / 工具调用 | [When Instruction Files Go Stale: Documentation Debt and Hidden Cost in Coding Agents](http://arxiv.org/abs/2611.09802v1) | arXiv | 英文资源，建议关注：LLM-based coding agents such as Claude Code are guided by repository instruction files (also called context files or agent configuration files) like AGENTS.md and CLAUDE.md, which ...（paper；更新 2026-11-06） |
+| 7 | 开源模型 / 模型平台 | [drvgautam/primer-on-aiengineering](https://github.com/drvgautam/primer-on-aiengineering) | GitHub | 英文资源，建议关注：Short, worked, runnable guides to how large language models work, with a notebook per guide and a PDF book（⭐ 0；更新 2026-11-05） |
+| 8 | AI Agent / 工具调用 | [XAIHT/Tlamatini](https://github.com/XAIHT/Tlamatini) | GitHub | 英文资源，建议关注：Speak an idea. Build the real thing. Tlamatini brings AI to code, 3D worlds and hardware: voice, live editor tutoring, 86 workflow agents, 110 tools, Unreal Engine, Blender, STM32,...（⭐ 15；更新 2026-11-09） |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
