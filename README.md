@@ -13,22 +13,18 @@
 <!-- WEEKLY_CHINESE_LLM_UPDATE:START -->
 ## 每周精选更新
 
-> 最近更新：2026-11-16。本期主要选论文原文、官方技术博客和开发者变更日志；偏重可复现的 Agentic Search、Reward、Rubric、RAG 与多模态系统方法。
+> 自动生成时间：2026-11-16。每周从全网筛选近期 ChatGPT / LLM / Agent / RAG / MCP / 后训练 / 多模态等高价值学习资源；候选资料不限中文，英文资料也会纳入，最终统一用中文表达学习价值。
 
-| 推荐 | 方向 | 资源 | 来源 / 事件日期 | 学习价值与适用边界 |
-| --- | --- | --- | --- | --- |
-| 1 | Agent 后训练 / Tool Use | [StateAlign](https://arxiv.org/abs/2611.16304) | 论文首发 11-12 | 构建可对照的任务状态并用状态对比 RL 训练工具调用时机。Qwen3-8B 在 BFCL v4 多轮准确率从 45.5%→55.2%；无工具场景幻觉率相对 outcome-only 由 62.2%→56.1%。 |
-| 2 | 多 Agent RL / Deep Research | [LEAD-RL](https://arxiv.org/abs/2611.17041) | 论文首发 11-12 | 在 main agent 与 subagent 联训中，对每份子 Agent 报告做 helpful/neutral/harmful Rubric 归因，门控 team advantage；BrowseComp 比共享团队信用基线 +2.49pt，critical-path cost 降 24.5%。 |
-| 3 | RAG / 多模态压缩 | [OpticalRAG](https://arxiv.org/abs/2611.13675) | 论文首发 11-10 | 将证据页转为视觉表示并经 query-conditioned distillation 压缩至 16 个注入 token；LongBench-v2 对闭卷 Qwen2.5-7B-Instruct +5.17pt，需注意视觉索引与编码成本。 |
-| 4 | Judge / Decision Model | [Decision Models in Hugging Face](https://huggingface.co/blog/decision) | HF 官方文章 11-10 | 明确 State + Questions + Allowed Answers → Decisions + Probabilities 的非生成式判决 API，并给出 Transformers、llama.cpp 和训练组件；值得用于 Jev/Rubric Judge 对照。 |
-| 5 | Embedding / Multi-Vector Retrieval | [Token Pooling-Aware Training](https://huggingface.co/blog/token-pooling) | HF 工程教程 11-11 | 对原始与池化后的 ColBERT 式向量同时施加检索损失；pool_factor=4 时 NanoBEIR nDCG@10 49.03→51.23，文档向量数比不压缩减少约 74.8%。 |
-| 6 | Agent Eval / Workflow | [WorkflowArena](https://arxiv.org/abs/2611.12856) | 论文首发 11-09 | 145 个跨 8 个专业领域的长任务，评测模型如何设计可执行的多 Agent 工作流、分工与交付，而非只看固定拓扑的任务成功率。 |
-| 7 | Skill / 程序性记忆 | [Skill Adapter](https://arxiv.org/abs/2611.17007) | 论文首发 11-12 | 从反馈生成个性化 Skill Adapter，按当前子任务/环境动态路由并预加载候选。相对 SkillRL 三项任务平均成功率 +11.43pt，扩展至 1000 Skill 仍有收益。 |
-| 8 | Agent-native 训练 / Verifier | [daVinci-Prover](https://arxiv.org/abs/2611.16433) | 论文首发 11-12 | 33.7B token 的证明任务中训练语料 + 约 36K 条 Lean verifier-grounded Agent 轨迹；与匹配 Qwen3-8B SFT-only 基线相比，三个证明基准平均 +13.7pt。 |
-| 9 | MCP / 文件与工具 | [MCP Files Extension（实验提案）](https://blog.modelcontextprotocol.io/posts/exploring-file-uploads-and-downloads-in-mcp/) | 官方博客 11-10 | 探索 io.modelcontextprotocol/files、x-mcp-file、直传存储与文件返回目标；仍属实验提案，尚非正式稳定规范。 |
-| 10 | MCP / 协议治理 | [MCP 六个月发布周期](https://blog.modelcontextprotocol.io/posts/mcp-release-cycle/) | 官方博客 11-11 | 正式宣布规范未来拟于每年 3 月和 9 月发布，下一目标为 2027-03-30；本次只是发布节奏调整，不是新协议版本。 |
-| 11 | ChatGPT / Codex 工程 | [Codex CLI 0.169.0](https://learn.chatgpt.com/docs/changelog) | OpenAI 更新日志 11-13 | 新增多侧边会话、历史任务搜索、自定义模型提供商配置；修复 Windows 沙箱路径及不可信目录信任边界相关问题，便于 Agent Harness 日常开发。 |
-| 12 | Agent Eval / 经验迁移 | [NIBench](https://arxiv.org/abs/2611.15831) | 论文首发 11-11 | 56 个跨 7 工具生态的工作流任务及 36 个可复现科学判断案例；技能蒸馏对既有任务有益，对未见任务增益不稳定，提醒评估 Skill 泛化。 |
+| 推荐 | 方向 | 资源 | 来源 | 推荐理由 |
+| ---- | ---- | ---- | ---- | ---- |
+| 1 | RAG / AI 搜索 | [niyomugaboetiene/LLM-full-course-with-langchain](https://github.com/niyomugaboetiene/LLM-full-course-with-langchain) | GitHub | 英文资源，建议关注：A learning repository dedicated to understanding Retrieval-Augmented Generation (RAG), Natural Language Processing (NLP), embeddings, vector databases, semantic search, and Large L...（⭐ 1；更新 2026-11-12） |
+| 2 | RAG / AI 搜索 | [kawsar-95/ai-learning-roadmap](https://github.com/kawsar-95/ai-learning-roadmap) | GitHub | 英文资源，建议关注：Single-file HTML reference guides on LLM Fundamentals, Prompt Engineering, and Context Engineering — dual-voice (technical + layman's terms) with diagrams and cited research.（⭐ 1；更新 2026-11-16） |
+| 3 | AI Agent / 工具调用 | [launchdarkly-labs/devrel-agents-tutorial](https://github.com/launchdarkly-labs/devrel-agents-tutorial) | GitHub | 英文资源，建议关注：Multi-agent AI chatbot with dynamic    configuration using LangGraph   workflows, RAG search, MCP tools,   and LaunchDarkly AI Configs.   Control AI behavior, swap models   (Claude...（⭐ 7；更新 2026-11-13） |
+| 4 | AI Agent / 工具调用 | [JackChiu-tszkit/agent-harness-starter](https://github.com/JackChiu-tszkit/agent-harness-starter) | GitHub | 英文资源，建议关注：A practical guide to Agent Harness architecture, covering context management, task orchestration, prompt engineering, model routing, memory, guardrails, agent runtime, observabilit...（⭐ 1；更新 2026-11-10） |
+| 5 | AI Agent / 工具调用 | [wania663/agentic-ai-complete-guide](https://github.com/wania663/agentic-ai-complete-guide) | GitHub | 英文资源，建议关注：A beginner-friendly 6-module Agentic AI learning roadmap covering AI agents, Qoder AI, context engineering, agentic workflows, MCP integrations, and hands-on software engineering p...（⭐ 0；更新 2026-11-03） |
+| 6 | 后训练 / 强化学习 | [neplachuu/llm-course-hw2_colab-ppo](https://huggingface.co/neplachuu/llm-course-hw2_colab-ppo) | Hugging Face | 近期更新模型，tags: transformers, safetensors, llama, text-generation, ppo, rlhf, reinforcement-learning, conversational（likes 0；更新 2026-11-16） |
+| 7 | 开源模型 / 模型平台 | [drvgautam/primer-on-aiengineering](https://github.com/drvgautam/primer-on-aiengineering) | GitHub | 英文资源，建议关注：Short, worked, runnable guides to how large language models work, with a notebook per guide and a PDF book（⭐ 0；更新 2026-11-12） |
+| 8 | AI Agent / 工具调用 | [XAIHT/Tlamatini](https://github.com/XAIHT/Tlamatini) | GitHub | 英文资源，建议关注：Speak an idea. Build the real thing. Tlamatini brings AI to code, 3D worlds and hardware: voice, live editor tutoring, 86 workflow agents, 110 tools, Unreal Engine, Blender, STM32,...（⭐ 15；更新 2026-11-16） |
 
 <!-- WEEKLY_CHINESE_LLM_UPDATE:END -->
 
